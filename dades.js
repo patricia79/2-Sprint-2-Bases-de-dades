@@ -1,42 +1,41 @@
 
-let arrayFunc = [];
+let arrayCust = [];
 
 let contar = _ => {
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
+    for (let i = 1; i < 11; i++) {
+        console.log(`cliente ${i}`);
     }
     console.log("final")
 }
 
 
-while (arrayFunc.length < 10) {
-    arrayFunc.push(contar);
+while (arrayCust.length < 11) {
+    arrayCust.push(contar);
 
 }
 
-for (let i = 0; i < 10; i++) {
-    (arrayFunc[i])();
+
+for (let i = 1; i < 11; i++) {
+    (arrayCust[i])();
 }
 
-console.log(arrayFunc);
 
-/*
+let arrayDirec = [];
 
-let arrayFunc = new Array(10); //crea array buida q tindrà 10 posicions
-
-let contar = _ => {
-    for (let i = 0; i < arrayFunc.length; i++) {
-        console.log(i);
+let contarj = _ => {
+    for (let j = 1; j < 11; j++) {
+        console.log(`direccion ${j}`);
     }
-    console.log("fin")
+    console.log("final")
 }
 
-for (let i = 0; i < arrayFunc.length; i++) {
-    arrayFunc[i] = contar;
+
+while (arrayDirec.length < 11) {
+    arrayDirec.push(contarj);
+
 }
 
-for (let i = 0; i < 10; i++) {
-    (arrayFunc[i])();
-}
 
-console.log(arrayFunc);*/
+for (let j = 1; j < 11; j++) {
+    (arrayDirec[j])();
+}
