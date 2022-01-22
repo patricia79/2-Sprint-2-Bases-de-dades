@@ -109,3 +109,5 @@ CREATE TABLE producte (
   FOREIGN KEY (idcat) REFERENCES categoria (idcat)
 );
 
+Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat
+Llista quantes comandes ha efectuat un determinat empleat

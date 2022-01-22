@@ -1,6 +1,36 @@
-DROP DATABASE IF EXISTS pizzeria;
-CREATE DATABASE pizzeria;
-USE pizzeria;
+DROP DATABASE IF EXISTS spotify;
+CREATE DATABASE spotify;
+USE spotify;
+
+/*
+Existeixen dos tipus d'usuaris: usuari free i usuari premium. De cada usuari guardem un identificador únic, email,
+ password, nom d'usuari, data de naixement, sexe, país, codi postal.
+Els usuaris premium realitzen subscripcions. Les dades necessàries que caldrà guardar per a cada subscripció són: 
+data d'inici de la subscripció, data de renovació del servei i una forma de pagament, que pot ser mitjançant targeta
+ de crèdit o PayPal.
+De les targetes de crèdit guardem el número de targeta, mes i any de caducitat i el codi de seguretat. 
+Dels usuaris que paguen amb PayPal guardem el nom d'usuari de PayPal. Ens interessa portar un registre de tots 
+els pagaments que un usuari premium ha anat realitzant durant el període que està subscrit. De cada pagament es 
+guarda la data, un número d'ordre (que és únic) i un total.
+Un usuari pot crear moltes playlists. De cada playlist guardem un títol, el nombre de cançons que conté, 
+un identificador únic i una data de creació. Quan un usuari esborra una playlist no s'esborra del sistema, sinó que
+ es marca com que ha estat eliminada. D'aquesta manera l'usuari pot tornar a recuperar els seus playlists en cas 
+ que les hagi eliminat per error. És necessari emmagatzemar la data en la qual uneixi playlist ha estat marcada com 
+ eliminada.
+Podem dir que existeixen dos tipus de playlists: actives i esborrades. Una playlist que està activa pot ser 
+compartida amb altres usuaris, això vol dir que altres usuaris poden afegir cançons en ella. En una llista 
+compartida ens interessa saber quin usuari ha estat el que ha afegit cada cançó i en quina data ho va fer. 
+Una cançó només pot pertànyer a un únic àlbum. Un àlbum pot contenir moltes cançons. Un àlbum ha estat publicat
+ per un únic artista. Un artista pot haver publicat molts àlbums. De cada cançó guardem un identificador únic, un 
+ títol, una durada i el nombre de vegades que ha estat reproduïda pels usuaris de Spotify.
+De cada àlbum guardem un identificador únic, títol, any de publicació i una imatge amb la portada. 
+De cada artista guardem un identificador únic, nom i una imatge de l'artista. Un usuari pot seguir a molts artistes.
+ Un artista pot estar relacionat amb altres artistes que facin música semblant. De manera que Spotify pugui 
+ mostrar-nos un llistat d'artistes relacionats amb els artistes que ens agraden. També ens interessa guardar 
+ quins són els àlbums i les cançons favorites d'un usuari. Un usuari pot seleccionar molts àlbums i moltes cançons
+  com a favorites.
+*/
+
 CREATE TABLE provincia (
   idprov INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(100) NOT NULL
