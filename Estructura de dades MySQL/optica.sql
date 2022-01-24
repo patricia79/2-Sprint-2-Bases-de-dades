@@ -7,62 +7,26 @@ CREATE TABLE ulleres (
   model VARCHAR(40),
   graduacioUd VARCHAR(60) NOT NULL,
   graduacioUe VARCHAR(60) NOT NULL,
-  tipusMuntura VARCHAR(50) NOT NULL,
-  colorMuntura VARCHAR(50),
-  colorVidres VARCHAR(50),
+  tipusMuntura ENUM ('PASTA', 'FLOTANT', 'METÀL·LICA'),
+  colorMuntura VARCHAR(50) NOT NULL,
+  colorVidres VARCHAR(50)NOT NULL,
   preu FLOAT NOT NULL
 );
 INSERT INTO
-  ulleres VALUE(1,'D&G','3553','5', '4','METALICA','NEGRA','TRANSPARENTE',254);
+  ulleres VALUE(1,'D&G','LKIOP','3.25', '3.25','METÀL·LICA','NEGRA','TRANSPARENT', 564);
  INSERT INTO
-  ulleres VALUE(
-    2,
-    'VOGUE',
-    '3552',
-    '2', '3',
-    'PASTA',
-    'BLANCA',
-    'TRANSPARENTE',
-    500
-  );
-INSERT INTO
-  ulleres VALUE(
-    3,
-    'RAYBAN',
-    '3551',
-    '1','2',
-    'AL AIRE',
-    'NEGRA',
-    'TRANSPARENTE',
-    254
-  );
-INSERT INTO
-  ulleres VALUE(
-    4,
-    'HAWKERS',
-    '3550',
-    '4', '4',
-    'AL AIRE',
-    'NEGRA',
-    'TRANSPARENTE',
-    204
-  );
-INSERT INTO
-  ulleres VALUE(
-    5,
-    'PRADA',
-    '3010',
-   '4', '4',
-    'pasta',
-    'blanca',
-    'TRANSPARENTE',
-    201
-  );
+  ulleres VALUE(2,'PRADA','KJU3','0.5', '1.5','PASTA','NEGRA','TRANSPARENT', 365);
+  INSERT INTO
+  ulleres VALUE(3,'PRADA','MLO3','1', '1.25','FLOTANT','TRANSPARENT','TRANSPARENT',125);
+  INSERT INTO
+  ulleres VALUE(4,'TOUS','7583','1', '1.25','FLOTANT','TRANSPARENT','TRANSPARENT',421);
+  INSERT INTO
+  ulleres VALUE(5,'TOUS','35','0.75', '1.02','METÀL·LICA','PLATA','TRANSPARENT',254);
 
    INSERT INTO
-  ulleres VALUE(6,'HAWKERS','3000','1.25', '4.5','METALICA','GRIS','MIRALL',138);
+  ulleres VALUE(6,'PRADA','3000','2.75', '3','METÀL·LICA','GRIS','TRANSPARENT',138);
   INSERT INTO
-  ulleres VALUE(7,'OAKLEY','MIMO','3.25', '4.75','PASTA','NEGRA','TRANSPARENT',254);
+  ulleres VALUE(7,'OAKLEY','MIMO','1.5', '2.5','PASTA','BLANC','TRANSPARENT',321);
 
 CREATE TABLE proveidors (
     idProv INT AUTO_INCREMENT PRIMARY KEY,
@@ -77,15 +41,24 @@ CREATE TABLE proveidors (
     pais VARCHAR(100) NOT NULL
   );
 INSERT INTO
-  proveidors VALUE(
-    1,
-    'Proveidor 1',
-    'NIFProv1',
-    '38383',
-    'proveidor1@proveidor1.com',
-    'fax',
-    'adress 1'
-  );
+  proveidors VALUE(1,'Ulleres_barates1','NIFProv1','111111111','Ulleres_barates1@Ulleres_barates1.com','999999999','adress_ulleres 
+  barates1',08100, 'barcelona', 'PAIS');
+    proveidors VALUE(2,'Ulleres_barates2','NIFProv2','222222222','Ulleres_barates1@Ulleres_barates2.com','999999999','adress_ulleres 
+  barates2',08200, 'barcelona', 'PAIS');
+    proveidors VALUE(3,'Ulleres_barates1','NIFProv1','333333333','Ulleres_barates1@Ulleres_barates1.com','333333330','adress_ulleres 
+  barates1',08300, 'barcelona', 'PAIS');
+    proveidors VALUE(4,'Ulleres_barates1','NIFProv1','444444444','Ulleres_barates1@Ulleres_barates1.com','444444440','adress_ulleres 
+  barates1',08400, 'barcelona', 'PAIS');
+    proveidors VALUE(5,'Ulleres_barates1','NIFProv1','555555555','Ulleres_barates1@Ulleres_barates1.com','555555550','adress_ulleres 
+  barates1',08500, 'barcelona', 'PAIS');
+    proveidors VALUE(6,'Ulleres_barates1','NIFProv1','38383','Ulleres_barates1@Ulleres_barates1.com','666666660','adress_ulleres 
+  barates1',08600, 'barcelona', 'PAIS');
+    proveidors VALUE(7,'Ulleres_barates1','NIFProv1','777777777','Ulleres_barates1@Ulleres_barates1.com','777777770','adress_ulleres 
+  barates1',08700, 'barcelona', 'PAIS');
+    proveidors VALUE(8,'Ulleres_barates1','NIFProv1','88888888','Ulleres_barates1@Ulleres_barates1.com','888888880','adress_ulleres 
+  barates1',08800, 'barcelona', 'PAIS');
+    proveidors VALUE(9,'Ulleres_barates9','NIFProv9','999999999','Ulleres_barates9@Ulleres_barates9.com','999999990','adress_ulleres 
+  barates9',08900, 'barcelona', 'PAIS');
 INSERT INTO
   proveidors VALUE(
     2,
