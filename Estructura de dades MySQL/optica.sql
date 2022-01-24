@@ -10,7 +10,7 @@ CREATE TABLE ulleres (
   tipusMuntura VARCHAR(50) NOT NULL,
   colorMuntura VARCHAR(50),
   colorVidres VARCHAR(50),
-  preu FLOAT NOT NULL,
+  preu FLOAT NOT NULL
 );
 INSERT INTO
   ulleres VALUE(
@@ -74,13 +74,11 @@ CREATE TABLE proveidors (
     telefon VARCHAR(60) NOT NULL,
     correuElectr VARCHAR(70),
     fax VARCHAR(50),
-    adress VARCHAR(100) NOT NULL 
-    codi postal INT NOT NULL 
-    ciutat VARCHAR(50) NOT NULL 
-    pais VARCHAR(100) NOT NULL
+    adress VARCHAR(100) NOT NULL codi postal INT NOT NULL ciutat VARCHAR(50) NOT NULL pais VARCHAR(100) NOT NULL
   );
 INSERT INTO
-  proveidors VALUE(    1,
+  proveidors VALUE(
+    1,
     'Proveidor 1',
     'NIFProv1',
     '38383',
@@ -113,10 +111,10 @@ CREATE TABLE clients (
     nom VARCHAR(40) NOT NULL,
     telefon VARCHAR(60) NOT NULL,
     correuElectr VARCHAR(70),
-    adress VARCHAR(100) NOT NULL 
-    codi postal INT NOT NULL 
-    ciutat VARCHAR(50) NOT NULL 
-    pais VARCHAR(100) NOT NULL
+    adress VARCHAR(100) NOT NULL,
+    codiPostal INT NOT NULL,
+    ciutat VARCHAR(50) NOT NULL,
+    pais VARCHAR(100) NOT NULL,
     dataRegistre DATETIME,
     clientReco INT,
     FOREIGN KEY (clientReco) REFERENCES clients (idClient)
