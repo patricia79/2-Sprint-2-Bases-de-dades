@@ -13,22 +13,13 @@ CREATE TABLE ulleres (
   preu FLOAT NOT NULL
 );
 INSERT INTO
-  ulleres VALUE(
-    1,
-    'D&G',
-    '3553',
-    '5-4',
-    'METALICA',
-    'NEGRA',
-    'TRANSPARENTE',
-    254
-  );
-INSERT INTO
+  ulleres VALUE(1,'D&G','3553','5', '4','METALICA','NEGRA','TRANSPARENTE',254);
+ INSERT INTO
   ulleres VALUE(
     2,
     'VOGUE',
     '3552',
-    '5-4',
+    '2', '3',
     'PASTA',
     'BLANCA',
     'TRANSPARENTE',
@@ -39,7 +30,7 @@ INSERT INTO
     3,
     'RAYBAN',
     '3551',
-    '5-4',
+    '1','2',
     'AL AIRE',
     'NEGRA',
     'TRANSPARENTE',
@@ -48,9 +39,9 @@ INSERT INTO
 INSERT INTO
   ulleres VALUE(
     4,
-    'PRADA',
+    'HAWKERS',
     '3550',
-    '5-4',
+    '4', '4',
     'AL AIRE',
     'NEGRA',
     'TRANSPARENTE',
@@ -58,15 +49,21 @@ INSERT INTO
   );
 INSERT INTO
   ulleres VALUE(
-    4,
+    5,
     'PRADA',
     '3010',
-    '5-4',
+   '4', '4',
     'pasta',
     'blanca',
     'TRANSPARENTE',
     201
   );
+
+   INSERT INTO
+  ulleres VALUE(6,'HAWKERS','3000','1.25', '4.5','METALICA','GRIS','MIRALL',138);
+  INSERT INTO
+  ulleres VALUE(7,'OAKLEY','MIMO','3.25', '4.75','PASTA','NEGRA','TRANSPARENT',254);
+
 CREATE TABLE proveidors (
     idProv INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(40) NOT NULL,
@@ -74,7 +71,10 @@ CREATE TABLE proveidors (
     telefon VARCHAR(60) NOT NULL,
     correuElectr VARCHAR(70),
     fax VARCHAR(50),
-    adress VARCHAR(100) NOT NULL codi postal INT NOT NULL ciutat VARCHAR(50) NOT NULL pais VARCHAR(100) NOT NULL
+    adress VARCHAR(100) NOT NULL,
+    codiPostal INT NOT NULL ,
+    ciutat VARCHAR(50) NOT NULL ,
+    pais VARCHAR(100) NOT NULL
   );
 INSERT INTO
   proveidors VALUE(
