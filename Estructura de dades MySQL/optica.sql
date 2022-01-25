@@ -156,7 +156,7 @@ CREATE TABLE clients (
     codiPostal INT NOT NULL,
     ciutat VARCHAR(50) NOT NULL,
     pais VARCHAR(100) NOT NULL,
-    dataRegistre DATE,
+    dataRegistre DATETIME,
     clientRecomanador INT,
     FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
   );
@@ -170,7 +170,7 @@ clients VALUE(
     08100,
     'barcelona',
     'PAIS',
-    '10-01-2021',
+    '2021-10-08',
     null
   );
   INSERT INTO
@@ -183,7 +183,7 @@ clients VALUE(
     08200,
     'barcelona',
     'PAIS',
-    '10-02-2021',
+    '2021-09-08',
     null
   );
   INSERT INTO
@@ -196,7 +196,7 @@ clients VALUE(
     08300,
     'barcelona',
     'PAIS',
-    '10-03-2021',
+    '2021-08-08',
     null
   );
   INSERT INTO
@@ -209,7 +209,7 @@ clients VALUE(
     08400,
     'barcelona',
     'PAIS',
-    '1004-2021',
+    '2021-07-08',
     null
   );
   INSERT INTO
@@ -222,7 +222,7 @@ clients VALUE(
     08500,
     'barcelona',
     'PAIS',
-    '10-11-2021',
+    '2021-06-08',
     null
   );
   INSERT INTO
@@ -235,7 +235,7 @@ clients VALUE(
     08600,
     'barcelona',
     'PAIS',
-    '10-05-2021',
+    '2021-05-08',
     null
   );
   INSERT INTO
@@ -248,7 +248,7 @@ clients VALUE(
     08700,
     'barcelona',
     'PAIS',
-    '10-09-2021',
+    '2021-04-08',
     null
   );
   INSERT INTO
@@ -261,7 +261,7 @@ clients VALUE(
     08800,
     'barcelona',
     'PAIS',
-    '10-08-2021',
+    '2021-03-08',
     null
   ); 
   INSERT INTO
@@ -274,7 +274,7 @@ clients VALUE(
     08900,
     'barcelona',
     'PAIS',
-    '10-07-2021',
+    '2021-02-08',
     null
   );
 CREATE TABLE facturaPart (
