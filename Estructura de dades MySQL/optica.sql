@@ -9,25 +9,93 @@ CREATE TABLE ulleres (
   graduacioUe VARCHAR(60) NOT NULL,
   tipusMuntura ENUM ('PASTA', 'FLOTANT', 'METÀL·LICA'),
   colorMuntura VARCHAR(50) NOT NULL,
-  colorVidres VARCHAR(50)NOT NULL,
+  colorVidres VARCHAR(50) NOT NULL,
   preu FLOAT NOT NULL
 );
 INSERT INTO
-  ulleres VALUE(1,'D&G','LKIOP','3.25', '3.25','METÀL·LICA','NEGRA','TRANSPARENT', 564);
- INSERT INTO
-  ulleres VALUE(2,'PRADA','KJU3','0.5', '1.5','PASTA','NEGRA','TRANSPARENT', 365);
-  INSERT INTO
-  ulleres VALUE(3,'PRADA','MLO3','1', '1.25','FLOTANT','TRANSPARENT','TRANSPARENT',125);
-  INSERT INTO
-  ulleres VALUE(4,'TOUS','7583','1', '1.25','FLOTANT','TRANSPARENT','TRANSPARENT',421);
-  INSERT INTO
-  ulleres VALUE(5,'TOUS','35','0.75', '1.02','METÀL·LICA','PLATA','TRANSPARENT',254);
-
-   INSERT INTO
-  ulleres VALUE(6,'PRADA','3000','2.75', '3','METÀL·LICA','GRIS','TRANSPARENT',138);
-  INSERT INTO
-  ulleres VALUE(7,'OAKLEY','MIMO','1.5', '2.5','PASTA','BLANC','TRANSPARENT',321);
-
+  ulleres VALUE(
+    1,
+    'D&G',
+    'LKIOP',
+    '3.25',
+    '3.25',
+    'METÀL·LICA',
+    'NEGRA',
+    'TRANSPARENT',
+    564
+  );
+INSERT INTO
+  ulleres VALUE(
+    2,
+    'PRADA',
+    'KJU3',
+    '0.5',
+    '1.5',
+    'PASTA',
+    'NEGRA',
+    'TRANSPARENT',
+    365
+  );
+INSERT INTO
+  ulleres VALUE(
+    3,
+    'PRADA',
+    'MLO3',
+    '1',
+    '1.25',
+    'FLOTANT',
+    'TRANSPARENT',
+    'TRANSPARENT',
+    125
+  );
+INSERT INTO
+  ulleres VALUE(
+    4,
+    'TOUS',
+    '7583',
+    '1',
+    '1.25',
+    'FLOTANT',
+    'TRANSPARENT',
+    'TRANSPARENT',
+    421
+  );
+INSERT INTO
+  ulleres VALUE(
+    5,
+    'TOUS',
+    '35',
+    '0.75',
+    '1.25',
+    'METÀL·LICA',
+    'PLATA',
+    'TRANSPARENT',
+    254
+  );
+INSERT INTO
+  ulleres VALUE(
+    6,
+    'PRADA',
+    '3000',
+    '2.75',
+    '3',
+    'METÀL·LICA',
+    'GRIS',
+    'TRANSPARENT',
+    138
+  );
+INSERT INTO
+  ulleres VALUE(
+    7,
+    'OAKLEY',
+    'MIMO',
+    '1.5',
+    '2.5',
+    'PASTA',
+    'BLANC',
+    'TRANSPARENT',
+    321
+  );
 CREATE TABLE proveidors (
     idProv INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(40) NOT NULL,
@@ -36,48 +104,49 @@ CREATE TABLE proveidors (
     correuElectr VARCHAR(70),
     fax VARCHAR(50),
     adress VARCHAR(100) NOT NULL,
-    codiPostal INT NOT NULL ,
-    ciutat VARCHAR(50) NOT NULL ,
+    codiPostal INT NOT NULL,
+    ciutat VARCHAR(50) NOT NULL,
     pais VARCHAR(100) NOT NULL
   );
 INSERT INTO
-  proveidors VALUE(1,'Ulleres_barates1','NIFProv1','111111111','Ulleres_barates1@Ulleres_barates1.com','999999999','adress_ulleres 
-  barates1',08100, 'barcelona', 'PAIS');
-    proveidors VALUE(2,'Ulleres_barates2','NIFProv2','222222222','Ulleres_barates1@Ulleres_barates2.com','999999999','adress_ulleres 
-  barates2',08200, 'barcelona', 'PAIS');
-    proveidors VALUE(3,'Ulleres_barates1','NIFProv1','333333333','Ulleres_barates1@Ulleres_barates1.com','333333330','adress_ulleres 
-  barates1',08300, 'barcelona', 'PAIS');
-    proveidors VALUE(4,'Ulleres_barates1','NIFProv1','444444444','Ulleres_barates1@Ulleres_barates1.com','444444440','adress_ulleres 
-  barates1',08400, 'barcelona', 'PAIS');
-    proveidors VALUE(5,'Ulleres_barates1','NIFProv1','555555555','Ulleres_barates1@Ulleres_barates1.com','555555550','adress_ulleres 
-  barates1',08500, 'barcelona', 'PAIS');
-    proveidors VALUE(6,'Ulleres_barates1','NIFProv1','38383','Ulleres_barates1@Ulleres_barates1.com','666666660','adress_ulleres 
-  barates1',08600, 'barcelona', 'PAIS');
-    proveidors VALUE(7,'Ulleres_barates1','NIFProv1','777777777','Ulleres_barates1@Ulleres_barates1.com','777777770','adress_ulleres 
-  barates1',08700, 'barcelona', 'PAIS');
-    proveidors VALUE(8,'Ulleres_barates1','NIFProv1','88888888','Ulleres_barates1@Ulleres_barates1.com','888888880','adress_ulleres 
-  barates1',08800, 'barcelona', 'PAIS');
-    proveidors VALUE(9,'Ulleres_barates9','NIFProv9','999999999','Ulleres_barates9@Ulleres_barates9.com','999999990','adress_ulleres 
-  barates9',08900, 'barcelona', 'PAIS');
-INSERT INTO
   proveidors VALUE(
-    2,
-    'Proveidor 2',
-    'NIFProv2',
-    '38382',
-    'proveidor2@proveidor2.com',
-    'fax',
-    'adreça 2'
+    1,
+    'Ulleres_barates1',
+    'NIFProv1',
+    '111111111',
+    'Ulleres_barates1@Ulleres_barates1.com',
+    '111111110',
+    'adress_ulleres 
+  barates1',
+    08100,
+    'barcelona',
+    'PAIS'
   );
-INSERT INTO
-  proveidors VALUE(
+proveidors VALUE(
+    2,
+    'Ulleres_barates2',
+    'NIFProv2',
+    '222222222',
+    'Ulleres_barates2@Ulleres_barates2.com',
+    '222222220',
+    'adress_ulleres 
+  barates2',
+    08200,
+    'barcelona',
+    'PAIS'
+  );
+proveidors VALUE(
     3,
-    'Proveidor 3',
+    'Ulleres_barates3',
     'NIFProv3',
-    '38381',
-    'proveidor3@proveidor3.com',
-    'fax',
-    'adreça 3'
+    '333333333',
+    'Ulleres_barates3@Ulleres_barates3.com',
+    '333333330',
+    'adress_ulleres 
+  barates3',
+    08300,
+    'barcelona',
+    'PAIS'
   );
 CREATE TABLE clients (
     idClient INT AUTO_INCREMENT PRIMARY KEY,
@@ -89,37 +158,115 @@ CREATE TABLE clients (
     ciutat VARCHAR(50) NOT NULL,
     pais VARCHAR(100) NOT NULL,
     dataRegistre DATETIME,
-    clientReco INT,
-    FOREIGN KEY (clientReco) REFERENCES clients (idClient)
+    clienteRecomanador INT,
+    FOREIGN KEY (clienteRecomendador) REFERENCES clients (idClient)
   );
-INSERT INTO
-  clients VALUE(
+clients VALUE(
     1,
-    'Client 1',
-    'Telefon 1',
-    'client1@client1.com',
-    'adreça 1',
-    '2022-01-07',
+    'client1',
+    '111111111',
+    '1client@client.com',
+    'adress client 1',
+    08100,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
     null
   );
-INSERT INTO
-  clients VALUE(
+clients VALUE(
     2,
-    'Client 2',
-    'Telefon 2',
-    'client2@client2.com',
-    'adreça 2',
-    '2022-01-07',
-    1
+    'client2',
+    '222222222',
+    '2client@client.com',
+    'adress client 2',
+    08200,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
   );
-INSERT INTO
-  clients VALUE(
+clients VALUE(
     3,
-    'Client 3',
-    'Telefon 3',
-    'client3@client3.com',
-    'adreça 3',
-    '2022-01-07',
+    'client3',
+    '333333333',
+    '3client@client.com',
+    'adress client 3',
+    08300,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    4,
+    'client4',
+    '444444444',
+    '4client@client.com',
+    'adress client 4',
+    08400,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    5,
+    'client5',
+    '555555555',
+    '5client@client.com',
+    'adress client 5',
+    08500,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    6,
+    'client6',
+    '666666666',
+    '6client@client.com',
+    'adress client 6',
+    08600,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    7,
+    'client7',
+    '777777777',
+    '7client@client.com',
+    'adress client 7',
+    08700,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    8,
+    'client8',
+    '888888888',
+    '8client@client.com',
+    'adress client 8',
+    08800,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
+    null
+  );
+clients VALUE(
+    9,
+    'client9',
+    '999999999',
+    '9client@client.com',
+    'adress client 9',
+    08900,
+    'barcelona',
+    'PAIS',
+    '10/01/2021',
     null
   );
 CREATE TABLE facturaPart (
@@ -131,19 +278,37 @@ CREATE TABLE facturaPart (
     FOREIGN KEY (idClient) REFERENCES clients (idClient)
   );
 INSERT INTO
-  facturaPart VALUE(1, 1, 'Silvia', '2022-01-07');
+  facturaPart VALUE(1, 1, 'Venedor2', '2022-01-07');
+facturaPart VALUE(1, 2, 'Venedor2', '2022-01-04');
+facturaPart VALUE(1, 5, 'Venedor1', '2021-11-03');
+facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
 INSERT INTO
-  facturaPart VALUE(2, 3, 'Charo', '2021-12-31');
+  facturaPart VALUE(2, 2, 'Venedor1', '2021-10-31');
+facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
+facturaPart VALUE(2, 6, 'Venedor2', '2021-08-31');
+facturaPart VALUE(2, 9, 'Venedor1', '2021-05-31');
 INSERT INTO
-  facturaPart VALUE(1, 2, 'Charo', '2021-11-03');
+  facturaPart VALUE(1, 2, 'Venedor1', '2021-11-03');
 INSERT INTO
-  facturaPart VALUE(3, 1, 'Silvia', '2021-01-07');
+  facturaPart VALUE(3, 1, 'Venedor2', '2021-01-07');
 INSERT INTO
-  facturaPart VALUE(1, 2, 'Silvia', '2021-03-07');
+  facturaPart VALUE(1, 2, 'Venedor2', '2021-03-07');
 INSERT INTO
-  facturaPart VALUE(1, 3, 'Silvia', '2021-04-07');
+  facturaPart VALUE(1, 3, 'Venedor2', '2021-04-07');
 INSERT INTO
-  facturaPart VALUE(4, 2, 'Silvia', '2021-05-07');
+  facturaPart VALUE(4, 2, 'Venedor2', '2021-05-07');
+INSERT INTO
+  facturaPart VALUE(2, 3, 'Venedor1', '2021-12-31');
+INSERT INTO
+  facturaPart VALUE(1, 2, 'Venedor1', '2021-11-03');
+INSERT INTO
+  facturaPart VALUE(3, 1, 'Venedor2', '2021-01-07');
+INSERT INTO
+  facturaPart VALUE(1, 2, 'Venedor2', '2021-03-07');
+INSERT INTO
+  facturaPart VALUE(1, 3, 'Venedor2', '2021-04-07');
+INSERT INTO
+  facturaPart VALUE(4, 2, 'Venedor2', '2021-05-07');
 CREATE TABLE facturaProv (
     idFact INT PRIMARY KEY,
     idProv INT NOT NULL,
@@ -187,7 +352,7 @@ FROM
   cul_ampolla.facturapart
   INNER JOIN cul_ampolla.ulleres ON cul_ampolla.facturapart.idUll = cul_ampolla.ulleres.idUll
 WHERE
-  venedor = 'Silvia'
+  venedor = 'Venedor2'
   AND YEAR(dataCompra) = 2021;
 # Query 3
 SELECT
