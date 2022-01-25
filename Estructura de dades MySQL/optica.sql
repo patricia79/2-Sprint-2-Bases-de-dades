@@ -121,6 +121,7 @@ INSERT INTO
     'barcelona',
     'PAIS'
   );
+  INSERT INTO
 proveidors VALUE(
     2,
     'Ulleres_barates2',
@@ -133,6 +134,7 @@ proveidors VALUE(
     'barcelona',
     'PAIS'
   );
+  INSERT INTO
 proveidors VALUE(
     3,
     'Ulleres_barates3',
@@ -158,6 +160,7 @@ CREATE TABLE clients (
     clienteRecomanador INT,
     FOREIGN KEY (clienteRecomendador) REFERENCES clients (idClient)
   );
+  INSERT INTO
 clients VALUE(
     1,
     'client1',
@@ -170,6 +173,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     2,
     'client2',
@@ -182,6 +186,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     3,
     'client3',
@@ -194,6 +199,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     4,
     'client4',
@@ -206,6 +212,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     5,
     'client5',
@@ -218,6 +225,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     6,
     'client6',
@@ -230,6 +238,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     7,
     'client7',
@@ -242,6 +251,7 @@ clients VALUE(
     '10/01/2021',
     null
   );
+  INSERT INTO
 clients VALUE(
     8,
     'client8',
@@ -253,7 +263,8 @@ clients VALUE(
     'PAIS',
     '10/01/2021',
     null
-  );
+  ); 
+  INSERT INTO
 clients VALUE(
     9,
     'client9',
@@ -276,20 +287,29 @@ CREATE TABLE facturaPart (
   );
 INSERT INTO
   facturaPart VALUE(1, 1, 'Venedor2', '2022-01-07');
+  INSERT INTO
 facturaPart VALUE(1, 2, 'Venedor2', '2022-01-04');
+INSERT INTO
 facturaPart VALUE(1, 5, 'Venedor1', '2021-11-03');
+INSERT INTO
 facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
 INSERT INTO
   facturaPart VALUE(2, 2, 'Venedor1', '2021-10-31');
+  INSERT INTO
 facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
 INSERT INTO
   facturaPart VALUE(3, 3, 'Venedor2', '2021-02-07');
+  INSERT INTO
 facturaPart VALUE(4, 7, 'Venedor1', '2022-01-04');
-facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
-facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
-facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
-facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
 INSERT INTO
+facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
+INSERT INTO
+facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
+INSERT INTO
+facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
+INSERT INTO
+facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
+
   CREATE TABLE facturaProv (
     idFact INT PRIMARY KEY,
     idProv INT NOT NULL,
@@ -345,3 +365,4 @@ FROM
   INNER JOIN factura_ulleres facull ON fap.idull = facull.idull
   INNER JOIN facturaprov facprov ON facull.idfact = facprov.idfact
   INNER JOIN proveidors prov ON facprov.idprov = prov.idprov;
+  
