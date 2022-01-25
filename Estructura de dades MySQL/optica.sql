@@ -183,7 +183,7 @@ clients VALUE(
     08200,
     'barcelona',
     'PAIS',
-    '10-01-2021',
+    '10-02-2021',
     null
   );
   INSERT INTO
@@ -196,7 +196,7 @@ clients VALUE(
     08300,
     'barcelona',
     'PAIS',
-    '10-01-2021',
+    '10-03-2021',
     null
   );
   INSERT INTO
@@ -209,7 +209,7 @@ clients VALUE(
     08400,
     'barcelona',
     'PAIS',
-    '10-10-2021',
+    '1004-2021',
     null
   );
   INSERT INTO
@@ -235,7 +235,7 @@ clients VALUE(
     08600,
     'barcelona',
     'PAIS',
-    '10-11-2021',
+    '10-05-2021',
     null
   );
   INSERT INTO
