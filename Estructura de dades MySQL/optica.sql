@@ -156,7 +156,7 @@ CREATE TABLE clients (
     codiPostal INT NOT NULL,
     ciutat VARCHAR(50) NOT NULL,
     pais VARCHAR(100) NOT NULL,
-    dataRegistre DATETIME,
+    dataRegistre DATE,
     clientRecomanador INT,
     FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
   );
