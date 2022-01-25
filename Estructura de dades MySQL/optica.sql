@@ -157,8 +157,8 @@ CREATE TABLE clients (
     ciutat VARCHAR(50) NOT NULL,
     pais VARCHAR(100) NOT NULL,
     dataRegistre DATETIME,
-    clienteRecomanador INT,
-    FOREIGN KEY (clienteRecomendador) REFERENCES clients (idClient)
+    clientRecomanador INT,
+    FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
   );
   INSERT INTO
 clients VALUE(
