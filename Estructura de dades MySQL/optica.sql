@@ -116,8 +116,7 @@ INSERT INTO
     '111111111',
     'Ulleres_barates1@Ulleres_barates1.com',
     '111111110',
-    'adress_ulleres 
-  barates1',
+    'adress_ulleres barates1',
     08100,
     'barcelona',
     'PAIS'
@@ -129,8 +128,7 @@ proveidors VALUE(
     '222222222',
     'Ulleres_barates2@Ulleres_barates2.com',
     '222222220',
-    'adress_ulleres 
-  barates2',
+    'adress_ulleres barates2',
     08200,
     'barcelona',
     'PAIS'
@@ -142,8 +140,7 @@ proveidors VALUE(
     '333333333',
     'Ulleres_barates3@Ulleres_barates3.com',
     '333333330',
-    'adress_ulleres 
-  barates3',
+    'adress_ulleres barates3',
     08300,
     'barcelona',
     'PAIS'
@@ -285,31 +282,15 @@ facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
 INSERT INTO
   facturaPart VALUE(2, 2, 'Venedor1', '2021-10-31');
 facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
-facturaPart VALUE(2, 6, 'Venedor2', '2021-08-31');
-facturaPart VALUE(2, 9, 'Venedor1', '2021-05-31');
 INSERT INTO
-  facturaPart VALUE(1, 2, 'Venedor1', '2021-11-03');
+  facturaPart VALUE(3, 3, 'Venedor2', '2021-02-07');
+facturaPart VALUE(4, 7, 'Venedor1', '2022-01-04');
+facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
+facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
+facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
+facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
 INSERT INTO
-  facturaPart VALUE(3, 1, 'Venedor2', '2021-01-07');
-INSERT INTO
-  facturaPart VALUE(1, 2, 'Venedor2', '2021-03-07');
-INSERT INTO
-  facturaPart VALUE(1, 3, 'Venedor2', '2021-04-07');
-INSERT INTO
-  facturaPart VALUE(4, 2, 'Venedor2', '2021-05-07');
-INSERT INTO
-  facturaPart VALUE(2, 3, 'Venedor1', '2021-12-31');
-INSERT INTO
-  facturaPart VALUE(1, 2, 'Venedor1', '2021-11-03');
-INSERT INTO
-  facturaPart VALUE(3, 1, 'Venedor2', '2021-01-07');
-INSERT INTO
-  facturaPart VALUE(1, 2, 'Venedor2', '2021-03-07');
-INSERT INTO
-  facturaPart VALUE(1, 3, 'Venedor2', '2021-04-07');
-INSERT INTO
-  facturaPart VALUE(4, 2, 'Venedor2', '2021-05-07');
-CREATE TABLE facturaProv (
+  CREATE TABLE facturaProv (
     idFact INT PRIMARY KEY,
     idProv INT NOT NULL,
     dataCompra DATETIME,
