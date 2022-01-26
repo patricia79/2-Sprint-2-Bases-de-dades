@@ -6,20 +6,19 @@ CREATE TABLE province (
   nameProv VARCHAR(100) NOT NULL
 );
 INSERT INTO
-  province VALUE(1, 'Barcelona' 08);
+  province VALUE(1, 'Barcelona');
 INSERT INTO
-  province VALUE(2, 'Lleida' 25);
+  province VALUE(2, 'Lleida');
 INSERT INTO
-  province VALUE(3, 'Girona' 17);
+  province VALUE(3, 'Girona');
 INSERT INTO
-  province VALUE(4, 'Tarragona' 43);
+  province VALUE(4, 'Tarragona');
 CREATE TABLE locality (
     idLocal INT AUTO_INCREMENT PRIMARY KEY,
     nameLocal VARCHAR(100) NOT NULL,
     refProv INT NOT NULL,
     FOREIGN KEY (refProv) REFERENCES province (idProv)
   );
-
 CREATE TABLE customer (
     idCust INT AUTO_INCREMENT PRIMARY KEY,
     name1 VARCHAR(40) NOT NULL,
@@ -28,28 +27,25 @@ CREATE TABLE customer (
     postCode INT NOT NULL,
     telefon INT NOT NULL,
     idLocal INT NOT NULL,
-    
     FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
   );
-
 CREATE TABLE store (
     idStore INT AUTO_INCREMENT PRIMARY KEY,
     adress VARCHAR(100) NOT NULL,
     postCode INT NOT NULL,
     telefon INT NOT NULL,
     idlocal INT NOT NULL,
-
     FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
   );
-CREATE TABLE empleat (
-    idempleat INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(40) NOT NULL,
-    cognoms VARCHAR(40) NOT NULL,
+CREATE TABLE employee (
+    idEmployee INT AUTO_INCREMENT PRIMARY KEY,
+    name1 VARCHAR(40) NOT NULL,
+    lastName VARCHAR(40) NOT NULL,
     nif VARCHAR(100) NOT NULL,
     telefon INT NOT NULL,
-    cuiner BIT,
-    idbotiga INT NOT NULL,
-    FOREIGN KEY (idbotiga) REFERENCES botiga (idbotiga)
+    typeEmployee enum ('cook', 'delivery'),
+    idStore INT NOT NULL,
+    FOREIGN KEY (idStore) REFERENCES store (idStore)
   );
 CREATE TABLE category (
     idCat INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -58,14 +54,14 @@ CREATE TABLE category (
 CREATE TABLE order (
     idOrder INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     idCust INT NOT NULL,
-    idbotiga INT NOT NULL,
+    idStore INT NOT NULL,
     dataHora DATETIME,
-    botiga BIT,
-    preuTotal FLOAT NOT NULL,
-    repartidor INT,
+    deliveryMethod enum ('store', 'delivery'),
+    totalPrice FLOAT NOT NULL,
+    delivery INT,
     FOREIGN KEY (idClients) REFERENCES clients (idClients),
-    FOREIGN KEY (idbotiga) REFERENCES botiga (idbotiga),
-    FOREIGN KEY (repartidor) REFERENCES empleat (idempleat)
+    FOREIGN KEY (idStore) REFERENCES botiga (idStore),
+    FOREIGN KEY (delivery) REFERENCES employee (idEmployee)
   );
 CREATE TABLE product (
     idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -78,8 +74,7 @@ CREATE TABLE product (
   );
   /*Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
   /*Llista quantes comandes ha efectuat un determinat empleat*/
-
-  INSERT INTO
+INSERT INTO
   clients VALUE(
     1,
     'nom1',
@@ -159,8 +154,7 @@ INSERT INTO
     8,
     733333333
   );
-
-  INSERT INTO
+INSERT INTO
   locality VALUE(1, 'Sabadell', 1);
 INSERT INTO
   locality VALUE(2, 'Manresa', 1);
