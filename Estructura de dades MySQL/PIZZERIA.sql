@@ -51,17 +51,35 @@ CREATE TABLE category (
     idCat INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nameCat VARCHAR(40) NOT NULL
   );
+
+  CREATE TABLE pizza (
+    idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    namePizza VARCHAR(40) NOT NULL
+  );
+
+   CREATE TABLE burguer (
+    idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nameBurguer VARCHAR(40) NOT NULL
+  );
+
+   CREATE TABLE drink (
+    idDrink INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nameDrink VARCHAR(40) NOT NULL
+  );
+
+
 CREATE TABLE order (
     idOrder INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     idCust INT NOT NULL,
     idStore INT NOT NULL,
     dataHora DATETIME,
     deliveryMethod enum ('store', 'delivery'),
+    product enum('pizza', 'burguer', 'drink')
     totalPrice FLOAT NOT NULL,
-    delivery INT,
+    deliveryMan INT,
     FOREIGN KEY (idClients) REFERENCES clients (idClients),
     FOREIGN KEY (idStore) REFERENCES botiga (idStore),
-    FOREIGN KEY (delivery) REFERENCES employee (idEmployee)
+    FOREIGN KEY (deliveryMan) REFERENCES employee (idEmployee)
   );
 CREATE TABLE product (
     idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
