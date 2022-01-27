@@ -57,9 +57,9 @@ CREATE TABLE category (
     descript VARCHAR(60) NOT NULL,
     price FLOAT NOT NULL,
     namePizza VARCHAR(40) NOT NULL,
-     idCat INT NOT NULL
+     idCat INT NOT NULL,
 
-      FOREIGN KEY (idCat) REFERENCES category (idCat),
+      FOREIGN KEY (idCat) REFERENCES category (idCat)
 
   );
 
@@ -86,11 +86,11 @@ CREATE TABLE order (
     idStore INT NOT NULL,
     dataHora DATETIME,
     deliveryMethod enum ('store', 'delivery'),
-    product enum('pizza', 'burguer', 'drink')
+    product enum ('pizza', 'burguer', 'drink'),
     totalPrice FLOAT NOT NULL,
     deliveryMan INT,
-    FOREIGN KEY (idClients) REFERENCES clients (idClients),
-    FOREIGN KEY (idStore) REFERENCES botiga (idStore),
+    FOREIGN KEY (idCust) REFERENCES customer (idCust),
+    FOREIGN KEY (idStore) REFERENCES store (idStore),
     FOREIGN KEY (deliveryMan) REFERENCES employee (idEmployee)
   );
 CREATE TABLE product (
