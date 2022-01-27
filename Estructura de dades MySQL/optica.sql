@@ -12,30 +12,51 @@ CREATE TABLE ulleres (
   colorVidres VARCHAR(50) NOT NULL,
   preu FLOAT NOT NULL
 );
-INSERT INTO
-  ulleres VALUE(
-    1,
-    'D&G',
-    'LKIOP',
-    '3.25',
-    '3.25',
-    'METÀL·LICA',
-    'NEGRA',
-    'TRANSPARENT',
-    564
-  );
-INSERT INTO
-  ulleres VALUE(
-    2,
-    'PRADA',
-    'KJU3',
-    '0.5',
-    '1.5',
-    'PASTA',
-    'NEGRA',
-    'TRANSPARENT',
-    365
-  );
+CREATE TABLE proveidors (
+  idProv INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(40) NOT NULL,
+  nif VARCHAR(40) NOT NULL,
+  telefon VARCHAR(60) NOT NULL,
+  correuElectr VARCHAR(70),
+  fax VARCHAR(50),
+  adress VARCHAR(100) NOT NULL,
+  codiPostal INT NOT NULL,
+  ciutat VARCHAR(50) NOT NULL,
+  pais VARCHAR(100) NOT NULL
+);
+CREATE TABLE clients (
+  idClient INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(40) NOT NULL,
+  telefon VARCHAR(60) NOT NULL,
+  correuElectr VARCHAR(70),
+  adress VARCHAR(100) NOT NULL,
+  codiPostal INT NOT NULL,
+  ciutat VARCHAR(50) NOT NULL,
+  pais VARCHAR(100) NOT NULL,
+  dataRegistre DATETIME,
+  clientRecomanador INT,
+  FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
+);
+CREATE TABLE facturaPart (
+  idUll INT NOT NULL,
+  idClient INT NOT NULL,
+  venedor VARCHAR(50) NOT NULL,
+  dataCompra DATETIME,
+  FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
+  FOREIGN KEY (idClient) REFERENCES clients (idClient)
+);
+CREATE TABLE facturaProv (
+  idFact INT PRIMARY KEY,
+  idProv INT NOT NULL,
+  dataCompra DATETIME,
+  FOREIGN KEY (idProv) REFERENCES proveidors (idProv)
+);
+CREATE Table factura_ulleres (
+  idFact INT NOT NULL,
+  idUll INT NOT NULL,
+  FOREIGN KEY (idFact) REFERENCES facturaProv(idFact),
+  FOREIGN KEY (idUll) REFERENCES ulleres(idUll)
+);
 INSERT INTO
   ulleres VALUE(
     3,
@@ -96,17 +117,29 @@ INSERT INTO
     'TRANSPARENT',
     321
   );
-CREATE TABLE proveidors (
-    idProv INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(40) NOT NULL,
-    nif VARCHAR(40) NOT NULL,
-    telefon VARCHAR(60) NOT NULL,
-    correuElectr VARCHAR(70),
-    fax VARCHAR(50),
-    adress VARCHAR(100) NOT NULL,
-    codiPostal INT NOT NULL,
-    ciutat VARCHAR(50) NOT NULL,
-    pais VARCHAR(100) NOT NULL
+INSERT INTO
+  ulleres VALUE(
+    1,
+    'D&G',
+    'LKIOP',
+    '3.25',
+    '3.25',
+    'METÀL·LICA',
+    'NEGRA',
+    'TRANSPARENT',
+    564
+  );
+INSERT INTO
+  ulleres VALUE(
+    2,
+    'PRADA',
+    'KJU3',
+    '0.5',
+    '1.5',
+    'PASTA',
+    'NEGRA',
+    'TRANSPARENT',
+    365
   );
 INSERT INTO
   proveidors VALUE(
@@ -121,8 +154,8 @@ INSERT INTO
     'barcelona',
     'PAIS'
   );
-  INSERT INTO
-proveidors VALUE(
+INSERT INTO
+  proveidors VALUE(
     2,
     'Ulleres_barates2',
     'NIFProv2',
@@ -134,8 +167,8 @@ proveidors VALUE(
     'barcelona',
     'PAIS'
   );
-  INSERT INTO
-proveidors VALUE(
+INSERT INTO
+  proveidors VALUE(
     3,
     'Ulleres_barates3',
     'NIFProv3',
@@ -147,21 +180,8 @@ proveidors VALUE(
     'barcelona',
     'PAIS'
   );
-CREATE TABLE clients (
-    idClient INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(40) NOT NULL,
-    telefon VARCHAR(60) NOT NULL,
-    correuElectr VARCHAR(70),
-    adress VARCHAR(100) NOT NULL,
-    codiPostal INT NOT NULL,
-    ciutat VARCHAR(50) NOT NULL,
-    pais VARCHAR(100) NOT NULL,
-    dataRegistre DATETIME,
-    clientRecomanador INT,
-    FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
-  );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     1,
     'client1',
     '111111111',
@@ -173,8 +193,8 @@ clients VALUE(
     '2021-10-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     2,
     'client2',
     '222222222',
@@ -186,8 +206,8 @@ clients VALUE(
     '2021-09-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     3,
     'client3',
     '333333333',
@@ -199,8 +219,8 @@ clients VALUE(
     '2021-08-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     4,
     'client4',
     '444444444',
@@ -212,8 +232,8 @@ clients VALUE(
     '2021-07-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     5,
     'client5',
     '555555555',
@@ -225,8 +245,8 @@ clients VALUE(
     '2021-06-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     6,
     'client6',
     '666666666',
@@ -238,8 +258,8 @@ clients VALUE(
     '2021-05-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     7,
     'client7',
     '777777777',
@@ -251,8 +271,8 @@ clients VALUE(
     '2021-04-08',
     null
   );
-  INSERT INTO
-clients VALUE(
+INSERT INTO
+  clients VALUE(
     8,
     'client8',
     '888888888',
@@ -263,9 +283,9 @@ clients VALUE(
     'PAIS',
     '2021-03-08',
     null
-  ); 
-  INSERT INTO
-clients VALUE(
+  );
+INSERT INTO
+  clients VALUE(
     9,
     'client9',
     '999999999',
@@ -277,57 +297,36 @@ clients VALUE(
     '2021-02-08',
     null
   );
-CREATE TABLE facturaPart (
-    idUll INT NOT NULL,
-    idClient INT NOT NULL,
-    venedor VARCHAR(50) NOT NULL,
-    dataCompra DATETIME,
-    FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
-    FOREIGN KEY (idClient) REFERENCES clients (idClient)
-  );
 INSERT INTO
   facturaPart VALUE(1, 1, 'Venedor2', '2022-01-07');
-  INSERT INTO
-facturaPart VALUE(1, 2, 'Venedor2', '2022-01-04');
 INSERT INTO
-facturaPart VALUE(1, 5, 'Venedor1', '2021-11-03');
+  facturaPart VALUE(1, 2, 'Venedor2', '2022-01-04');
 INSERT INTO
-facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
+  facturaPart VALUE(1, 5, 'Venedor1', '2021-11-03');
+INSERT INTO
+  facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
 INSERT INTO
   facturaPart VALUE(2, 2, 'Venedor1', '2021-10-31');
-  INSERT INTO
-facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
+INSERT INTO
+  facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
 INSERT INTO
   facturaPart VALUE(3, 3, 'Venedor2', '2021-02-07');
-  INSERT INTO
-facturaPart VALUE(4, 7, 'Venedor1', '2022-01-04');
 INSERT INTO
-facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
+  facturaPart VALUE(4, 7, 'Venedor1', '2022-01-04');
 INSERT INTO
-facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
+  facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
 INSERT INTO
-facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
+  facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
 INSERT INTO
-facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
-
-  CREATE TABLE facturaProv (
-    idFact INT PRIMARY KEY,
-    idProv INT NOT NULL,
-    dataCompra DATETIME,
-    FOREIGN KEY (idProv) REFERENCES proveidors (idProv)
-  );
+  facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
+INSERT INTO
+  facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
 INSERT INTO
   facturaprov VALUE(1, 1, '2022-01-07');
 INSERT INTO
   facturaprov VALUE(2, 2, '2021-01-07');
 INSERT INTO
   facturaprov VALUE(3, 3, '2021-12-07');
-CREATE Table factura_ulleres (
-    idFact INT NOT NULL,
-    idUll INT NOT NULL,
-    FOREIGN KEY (idFact) REFERENCES facturaProv(idFact),
-    FOREIGN KEY (idUll) REFERENCES ulleres(idUll)
-  );
 INSERT INTO
   factura_ulleres VALUE(1, 1);
 INSERT INTO
@@ -365,4 +364,3 @@ FROM
   INNER JOIN factura_ulleres facull ON fap.idull = facull.idull
   INNER JOIN facturaprov facprov ON facull.idfact = facprov.idfact
   INNER JOIN proveidors prov ON facprov.idprov = prov.idprov;
-  
