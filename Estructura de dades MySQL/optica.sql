@@ -320,8 +320,6 @@ INSERT INTO
 INSERT INTO
   facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
 INSERT INTO
-  facturaPart VALUE(8, 9, 'Venedor2', '2021-11-09');
-INSERT INTO
   facturaprov VALUE(1, 1, '2022-01-07');
 INSERT INTO
   facturaprov VALUE(2, 2, '2021-01-07');
