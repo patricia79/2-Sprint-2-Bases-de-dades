@@ -1,24 +1,20 @@
 DROP DATABASE IF EXISTS pizzeria;
 CREATE DATABASE pizzeria;
 USE pizzeria;
+
 CREATE TABLE province (
   idProv INT AUTO_INCREMENT PRIMARY KEY,
   nameProv VARCHAR(100) NOT NULL
 );
-INSERT INTO
-  province VALUE(1, 'Barcelona');
-INSERT INTO
-  province VALUE(2, 'Lleida');
-INSERT INTO
-  province VALUE(3, 'Girona');
-INSERT INTO
-  province VALUE(4, 'Tarragona');
+
 CREATE TABLE locality (
     idLocal INT AUTO_INCREMENT PRIMARY KEY,
     nameLocal VARCHAR(100) NOT NULL,
     refProv INT NOT NULL,
     FOREIGN KEY (refProv) REFERENCES province (idProv)
   );
+
+
 CREATE TABLE customer (
     idCust INT AUTO_INCREMENT PRIMARY KEY,
     name1 VARCHAR(40) NOT NULL,
@@ -29,6 +25,8 @@ CREATE TABLE customer (
     idLocal INT NOT NULL,
     FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
   );
+
+
 CREATE TABLE store (
     idStore INT AUTO_INCREMENT PRIMARY KEY,
     adress VARCHAR(100) NOT NULL,
@@ -37,6 +35,7 @@ CREATE TABLE store (
     idlocal INT NOT NULL,
     FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
   );
+
 CREATE TABLE employee (
     idEmployee INT AUTO_INCREMENT PRIMARY KEY,
     name1 VARCHAR(40) NOT NULL,
@@ -54,17 +53,30 @@ CREATE TABLE category (
 
   CREATE TABLE pizza (
     idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    namePizza VARCHAR(40) NOT NULL
+     picture LONGBLOB,
+    descript VARCHAR(60) NOT NULL,
+    price FLOAT NOT NULL,
+    namePizza VARCHAR(40) NOT NULL,
+     idCat INT NOT NULL
+
+      FOREIGN KEY (idCat) REFERENCES category (idCat),
+
   );
 
-   CREATE TABLE burguer (
-    idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameBurguer VARCHAR(40) NOT NULL
+   CREATE TABLE burger (
+    idBurger INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nameBurger VARCHAR(40) NOT NULL,
+     picture LONGBLOB,
+    descript VARCHAR(60) NOT NULL,
+    price FLOAT NOT NULL
   );
 
    CREATE TABLE drink (
     idDrink INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameDrink VARCHAR(40) NOT NULL
+    nameDrink VARCHAR(40) NOT NULL,
+     picture LONGBLOB,
+    descript VARCHAR(60) NOT NULL,
+    price FLOAT NOT NULL
   );
 
 
@@ -90,8 +102,16 @@ CREATE TABLE product (
     idCat INT,
     FOREIGN KEY (idCat) REFERENCES category (idCat)
   );
-  /*Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
-  /*Llista quantes comandes ha efectuat un determinat empleat*/
+
+INSERT INTO
+  province VALUE(1, 'Barcelona');
+INSERT INTO
+  province VALUE(2, 'Lleida');
+INSERT INTO
+  province VALUE(3, 'Girona');
+INSERT INTO
+  province VALUE(4, 'Tarragona');
+
 INSERT INTO
   clients VALUE(
     1,
@@ -188,3 +208,14 @@ INSERT INTO
   locality VALUE(7, 'Olot', 3);
 INSERT INTO
   locality VALUE(8, 'Flix', 4);
+
+
+
+
+
+
+
+
+  
+  /*Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
+  /*Llista quantes comandes ha efectuat un determinat empleat*/
