@@ -22,7 +22,9 @@ CREATE TABLE proveidors (
   adress VARCHAR(100) NOT NULL,
   codiPostal INT NOT NULL,
   ciutat VARCHAR(50) NOT NULL,
-  pais VARCHAR(100) NOT NULL
+  pais VARCHAR(100) NOT NULL,
+   idUll INT NOT NULL,
+    FOREIGN KEY (idUll) REFERENCES ulleres (idUll)
 );
 CREATE TABLE clients (
   idClient INT AUTO_INCREMENT PRIMARY KEY,
@@ -35,28 +37,14 @@ CREATE TABLE clients (
   pais VARCHAR(100) NOT NULL,
   dataRegistre DATETIME,
   clientRecomanador INT,
+   venedor VARCHAR(50) NOT NULL,
+  dataCompra DATETIME,
+   idUll INT NOT NULL,
+    FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
   FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
 );
-CREATE TABLE facturaPart (
-  idUll INT NOT NULL,
-  idClient INT NOT NULL,
-  venedor VARCHAR(50) NOT NULL,
-  dataCompra DATETIME,
-  FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
-  FOREIGN KEY (idClient) REFERENCES clients (idClient)
-);
-CREATE TABLE facturaProv (
-  idFact INT PRIMARY KEY,
-  idProv INT NOT NULL,
-  dataCompra DATETIME,
-  FOREIGN KEY (idProv) REFERENCES proveidors (idProv)
-);
-CREATE Table factura_ulleres (
-  idFact INT NOT NULL,
-  idUll INT NOT NULL,
-  FOREIGN KEY (idFact) REFERENCES facturaProv(idFact),
-  FOREIGN KEY (idUll) REFERENCES ulleres(idUll)
-);
+
+;
 INSERT INTO
   ulleres VALUE(
     3,
