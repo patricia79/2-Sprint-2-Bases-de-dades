@@ -1,109 +1,93 @@
 DROP DATABASE IF EXISTS pizzeria;
 CREATE DATABASE pizzeria;
 USE pizzeria;
-
 CREATE TABLE province (
   idProv INT AUTO_INCREMENT PRIMARY KEY,
   nameProv VARCHAR(100) NOT NULL
 );
-
 CREATE TABLE locality (
-    idLocal INT AUTO_INCREMENT PRIMARY KEY,
-    nameLocal VARCHAR(100) NOT NULL,
-    refProv INT NOT NULL,
-    FOREIGN KEY (refProv) REFERENCES province (idProv)
-  );
-
-
+  idLocal INT AUTO_INCREMENT PRIMARY KEY,
+  nameLocal VARCHAR(100) NOT NULL,
+  refProv INT NOT NULL,
+  FOREIGN KEY (refProv) REFERENCES province (idProv)
+);
 CREATE TABLE customer (
-    idCust INT AUTO_INCREMENT PRIMARY KEY,
-    name1 VARCHAR(40) NOT NULL,
-    lastName VARCHAR(40) NOT NULL,
-    adress VARCHAR(100) NOT NULL,
-    postCode INT NOT NULL,
-    telefon INT NOT NULL,
-    idLocal INT NOT NULL,
-    FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
-  );
-
-
+  idCust INT AUTO_INCREMENT PRIMARY KEY,
+  name1 VARCHAR(40) NOT NULL,
+  lastName VARCHAR(40) NOT NULL,
+  adress VARCHAR(100) NOT NULL,
+  postCode INT NOT NULL,
+  telefon INT NOT NULL,
+  idLocal INT NOT NULL,
+  FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
+);
 CREATE TABLE store (
-    idStore INT AUTO_INCREMENT PRIMARY KEY,
-    adress VARCHAR(100) NOT NULL,
-    postCode INT NOT NULL,
-    telefon INT NOT NULL,
-    idlocal INT NOT NULL,
-    FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
-  );
-
+  idStore INT AUTO_INCREMENT PRIMARY KEY,
+  adress VARCHAR(100) NOT NULL,
+  postCode INT NOT NULL,
+  telefon INT NOT NULL,
+  idlocal INT NOT NULL,
+  FOREIGN KEY (idLocal) REFERENCES locality (idLocal)
+);
 CREATE TABLE employee (
-    idEmployee INT AUTO_INCREMENT PRIMARY KEY,
-    name1 VARCHAR(40) NOT NULL,
-    lastName VARCHAR(40) NOT NULL,
-    nif VARCHAR(100) NOT NULL,
-    telefon INT NOT NULL,
-    typeEmployee enum ('cook', 'delivery'),
-    idStore INT NOT NULL,
-    FOREIGN KEY (idStore) REFERENCES store (idStore)
-  );
+  idEmployee INT AUTO_INCREMENT PRIMARY KEY,
+  name1 VARCHAR(40) NOT NULL,
+  lastName VARCHAR(40) NOT NULL,
+  nif VARCHAR(100) NOT NULL,
+  telefon INT NOT NULL,
+  typeEmployee enum ('cook', 'delivery'),
+  idStore INT NOT NULL,
+  FOREIGN KEY (idStore) REFERENCES store (idStore)
+);
 CREATE TABLE category (
-    idCat INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameCat VARCHAR(40) NOT NULL
-  );
-
-  CREATE TABLE pizza (
-    idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-     picture LONGBLOB,
-    descript VARCHAR(60) NOT NULL,
-    price FLOAT NOT NULL,
-    namePizza VARCHAR(40) NOT NULL,
-     idCat INT NOT NULL,
-
-      FOREIGN KEY (idCat) REFERENCES category (idCat)
-
-  );
-
-   CREATE TABLE burger (
-    idBurger INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameBurger VARCHAR(40) NOT NULL,
-     picture LONGBLOB,
-    descript VARCHAR(60) NOT NULL,
-    price FLOAT NOT NULL
-  );
-
-   CREATE TABLE drink (
-    idDrink INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameDrink VARCHAR(40) NOT NULL,
-     picture LONGBLOB,
-    descript VARCHAR(60) NOT NULL,
-    price FLOAT NOT NULL
-  );
-  
-CREATE TABLE product (
-    idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameP VARCHAR(40) NOT NULL,
-    picture LONGBLOB,
-    descript VARCHAR(60) NOT NULL,
-    price FLOAT NOT NULL,
-    idCat INT,
-    FOREIGN KEY (idCat) REFERENCES category (idCat)
-  );
-
-
-
+  idCat INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nameCat VARCHAR(40) NOT NULL
+);
+CREATE TABLE pizza (
+  idPizza INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  namePizza VARCHAR(40) NOT NULL,
+  picture LONGBLOB,
+  descript VARCHAR(60) NOT NULL,
+  price FLOAT NOT NULL,
+  idCat INT NOT NULL,
+  FOREIGN KEY (idCat) REFERENCES category (idCat)
+);
+CREATE TABLE burger (
+  idBurger INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nameBurger VARCHAR(40) NOT NULL,
+  picture LONGBLOB,
+  descript VARCHAR(60) NOT NULL,
+  price FLOAT NOT NULL
+);
+CREATE TABLE drink (
+  idDrink INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nameDrink VARCHAR(40) NOT NULL,
+  picture LONGBLOB,
+  descript VARCHAR(60) NOT NULL,
+  price FLOAT NOT NULL
+);
+CREATE TABLE Product (
+  idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  idBurger INT NOT NULL,
+  idPizza INT NOT NULL,
+  idDrink INT NOT NULL,
+  FOREIGN KEY (idBurger) REFERENCES burger (idBurger),
+  FOREIGN KEY (idPizza) REFERENCES pizza (idPizza),
+  FOREIGN KEY (idDrink) REFERENCES drink (idDrink)
+);
 CREATE TABLE order (
-    idOrder INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    idCust INT NOT NULL,
-    idStore INT NOT NULL,
-    dataHora DATETIME,
-    deliveryMethod enum ('store', 'delivery'),
-    product enum ('pizza', 'burguer', 'drink'),
-    totalPrice FLOAT NOT NULL,
-    deliveryMan INT,
-    FOREIGN KEY (idCust) REFERENCES customer (idCust),
-    FOREIGN KEY (idStore) REFERENCES store (idStore),
-    FOREIGN KEY (deliveryMan) REFERENCES employee (idEmployee)
-  );
+  idOrder INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  idCust INT NOT NULL,
+  idStore INT NOT NULL,
+  dataHora DATETIME,
+  deliveryMethod enum ('store', 'delivery'),
+  product enum ('pizza', 'burger', 'drink'),
+  totalPrice FLOAT NOT NULL,
+  deliveryMan INT,
+  FOREIGN KEY (idCust) REFERENCES customer (idCust),
+  FOREIGN KEY (idStore) REFERENCES store (idStore),
+  FOREIGN KEY (deliveryMan) REFERENCES employee (idEmployee)
+);
 INSERT INTO
   province VALUE(1, 'Barcelona');
 INSERT INTO
@@ -112,7 +96,6 @@ INSERT INTO
   province VALUE(3, 'Girona');
 INSERT INTO
   province VALUE(4, 'Tarragona');
-
 INSERT INTO
   clients VALUE(
     1,
@@ -209,14 +192,5 @@ INSERT INTO
   locality VALUE(7, 'Olot', 3);
 INSERT INTO
   locality VALUE(8, 'Flix', 4);
-
-
-
-
-
-
-
-
-  
   /*Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
   /*Llista quantes comandes ha efectuat un determinat empleat*/
