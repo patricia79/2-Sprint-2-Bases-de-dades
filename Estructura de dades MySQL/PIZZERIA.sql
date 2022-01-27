@@ -78,6 +78,17 @@ CREATE TABLE category (
     descript VARCHAR(60) NOT NULL,
     price FLOAT NOT NULL
   );
+  
+CREATE TABLE product (
+    idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nameP VARCHAR(40) NOT NULL,
+    picture LONGBLOB,
+    descript VARCHAR(60) NOT NULL,
+    price FLOAT NOT NULL,
+    idCat INT,
+    FOREIGN KEY (idCat) REFERENCES category (idCat)
+  );
+
 
 
 CREATE TABLE order (
@@ -93,16 +104,6 @@ CREATE TABLE order (
     FOREIGN KEY (idStore) REFERENCES store (idStore),
     FOREIGN KEY (deliveryMan) REFERENCES employee (idEmployee)
   );
-CREATE TABLE product (
-    idProd INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nameP VARCHAR(40) NOT NULL,
-    picture LONGBLOB,
-    descript VARCHAR(60) NOT NULL,
-    price FLOAT NOT NULL,
-    idCat INT,
-    FOREIGN KEY (idCat) REFERENCES category (idCat)
-  );
-
 INSERT INTO
   province VALUE(1, 'Barcelona');
 INSERT INTO
