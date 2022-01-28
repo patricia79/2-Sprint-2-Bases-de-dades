@@ -15,7 +15,7 @@ CREATE TABLE ulleres (
 CREATE TABLE proveidors (
   idProv INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(40) NOT NULL,
-  nif INT NOT NULL,
+  nif VARCHAR(20) NOT NULL,
   telefon INT NOT NULL,
   correuElectr VARCHAR(70),
   fax INT,
@@ -29,7 +29,7 @@ CREATE TABLE proveidors (
 CREATE TABLE clients (
   idClient INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(40) NOT NULL,
-  telefon VARCHAR(60) NOT NULL,
+  telefon INT NOT NULL,
   correuElectr VARCHAR(70),
   adress VARCHAR(100) NOT NULL,
   codiPostal INT NOT NULL,
@@ -141,11 +141,12 @@ INSERT INTO
     'TRANSPARENT',
     564
   );
+
 INSERT INTO
-  ulleres VALUE(
-    9,
-    'PRADA',
-    'KJU3',
+  proveidors VALUE(
+    1,
+    'ulleres_barates1',
+    11111111,
     '0.5',
     '1.5',
     'PASTA',
