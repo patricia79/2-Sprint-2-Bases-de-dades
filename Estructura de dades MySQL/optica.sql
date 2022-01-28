@@ -53,7 +53,8 @@ INSERT INTO
     'FLOTANT',
     'TRANSPARENT',
     'TRANSPARENT',
-    223
+    223,
+    2
   );
 INSERT INTO
   ulleres VALUE(
@@ -65,7 +66,8 @@ INSERT INTO
     'pasta',
     'negre',
     'TRANSPARENT',
-    125
+    125,
+    1
   );
 INSERT INTO
   ulleres VALUE(
@@ -77,7 +79,8 @@ INSERT INTO
     'metàl·lica',
     'gris',
     'TRANSPARENT',
-    125
+    125,
+    1
   );
 INSERT INTO
   ulleres VALUE(
@@ -89,7 +92,8 @@ INSERT INTO
     'FLOTANT',
     'TRANSPARENT',
     'TRANSPARENT',
-    421
+    421,
+    2
   );
 INSERT INTO
   ulleres VALUE(
@@ -101,7 +105,8 @@ INSERT INTO
     'METÀL·LICA',
     'PLATA',
     'TRANSPARENT',
-    254
+    254,
+    2
   );
 INSERT INTO
   ulleres VALUE(
@@ -113,7 +118,8 @@ INSERT INTO
     'METÀL·LICA',
     'GRIS',
     'TRANSPARENT',
-    138
+    138,
+    1
   );
 INSERT INTO
   ulleres VALUE(
@@ -125,7 +131,8 @@ INSERT INTO
     'PASTA',
     'BLANC',
     'TRANSPARENT',
-    321
+    321,
+    2
   );
 INSERT INTO
   ulleres VALUE(
@@ -137,7 +144,8 @@ INSERT INTO
     'METÀL·LICA',
     'NEGRA',
     'TRANSPARENT',
-    564
+    564,
+    1
   );
 INSERT INTO
   proveidors VALUE(
@@ -150,8 +158,7 @@ INSERT INTO
     'ulleres 1',
     08000,
     'barcelona',
-    'pais',
-    2
+    'pais'
   );
 INSERT INTO
   proveidors VALUE(
@@ -164,8 +171,7 @@ INSERT INTO
     'ulleres 2',
     08000,
     'barcelona',
-    'pais',
-    1
+    'pais'
   );
 INSERT INTO
   clients VALUE(
