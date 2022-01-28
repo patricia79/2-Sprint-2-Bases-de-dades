@@ -26,6 +26,7 @@ CREATE TABLE proveidors (
   idUll INT NOT NULL,
   FOREIGN KEY (idUll) REFERENCES ulleres (idUll)
 );
+
 CREATE TABLE clients (
   idClient INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(40) NOT NULL,
@@ -38,12 +39,9 @@ CREATE TABLE clients (
   dataRegistre DATETIME,
   clientRecomanador INT,
   venedor VARCHAR(50) NOT NULL,
-  idVenedor INT AUTO_INCREMENT,
   dataCompra DATETIME,
   idUll INT NOT NULL,
-  idProv INT NOT NULL,
   FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
-  FOREIGN KEY (idProv) REFERENCES proveidors (idProv),
   FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
 );
 INSERT INTO
@@ -156,48 +154,7 @@ INSERT INTO
     'pais',
     2
   );
-INSERT INTO
-  proveidors VALUE(
-    1,
-    'ulleres_barates1',
-    '11111111A',
-    111111111,
-    'ulleres_barates1@ulleres_barates1.com',
-    111111110,
-    'ulleres 1',
-    08000,
-    'barcelona',
-    'pais',
-    3
-  );
-INSERT INTO
-  proveidors VALUE(
-    1,
-    'ulleres_barates1',
-    '11111111A',
-    111111111,
-    'ulleres_barates1@ulleres_barates1.com',
-    111111110,
-    'ulleres 1',
-    08000,
-    'barcelona',
-    'pais',
-    6
-  );
-INSERT INTO
-  proveidors VALUE(
-    1,
-    'ulleres_barates1',
-    '11111111A',
-    111111111,
-    'ulleres_barates1@ulleres_barates1.com',
-    111111110,
-    'ulleres 1',
-    08000,
-    'barcelona',
-    'pais',
-    8
-  );
+  
 INSERT INTO
   proveidors VALUE(
     2,
@@ -211,46 +168,4 @@ INSERT INTO
     'barcelona',
     'pais',
     1
-  );
-INSERT INTO
-  proveidors VALUE(
-    2,
-    'ulleres_barates2',
-    '22222222B',
-    222222222,
-    'ulleres_barates2@ulleres_barates2.com',
-    222222220,
-    'ulleres 2',
-    08000,
-    'barcelona',
-    'pais',
-    7
-  );
-INSERT INTO
-  proveidors VALUE(
-    2,
-    'ulleres_barates2',
-    '22222222B',
-    222222222,
-    'ulleres_barates2@ulleres_barates2.com',
-    222222220,
-    'ulleres 2',
-    08000,
-    'barcelona',
-    'pais',
-    4
-  );
-INSERT INTO
-  proveidors VALUE(
-    2,
-    'ulleres_barates2',
-    '22222222B',
-    222222222,
-    'ulleres_barates2@ulleres_barates2.com',
-    222222220,
-    'ulleres 2',
-    08000,
-    'barcelona',
-    'pais',
-    5
   );
