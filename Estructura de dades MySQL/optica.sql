@@ -43,7 +43,6 @@ CREATE TABLE clients (
   FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
   FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
 );
-
 INSERT INTO
   ulleres VALUE(
     2,
@@ -161,6 +160,7 @@ INSERT INTO
     'barcelona',
     'pais'
   );
+
 INSERT INTO
   clients VALUE(
     1,
@@ -176,4 +176,79 @@ INSERT INTO
     'venedor1',
     '2021-11-30',
     1
-  );INSERT INTO   ulleres VALUE(     1,     'oakley',     'oak1',     '0.5',     '0.25',     'FLOTANT',     'TRANSPARENT',     'TRANSPARENT',     223,     2   )
+  );
+
+  INSERT INTO
+  clients VALUE(
+    2,
+    'client 2',
+    222222222,
+    'client2@client2.com',
+    'client 2',
+    08000,
+    'barcelona',
+    'pais',
+    '2021-10-25',
+    1,
+    'venedor2',
+    '2021-10-31',
+    2
+  );
+
+  INSERT INTO
+  clients VALUE(
+    3,
+    'client 3',
+    333333333,
+    'client3@client3.com',
+    'client 3',
+    08000,
+    'barcelona',
+    'pais',
+    '2021-09-25',
+    2,
+    'venedor1',
+    '2021-09-30',
+    2
+  );
+
+  INSERT INTO
+  clients VALUE(
+    4,
+    'client 4',
+    444444444,
+    'client4@client4.com',
+    'client 4',
+    08000,
+    'barcelona',
+    'pais',
+    '2021-08-25',
+    null,
+    'venedor2',
+    '2021-08-30',
+    3
+  );
+
+  INSERT INTO
+  clients VALUE(
+    5,
+    'client 5',
+    555555555,
+    'client5@client5.com',
+    'client 5',
+    08000,
+    'barcelona',
+    'pais',
+    '2021-07-25',
+    null,
+    'venedor1',
+    '2021-07-30',
+    4
+  );
+
+
+
+
+ /* Llista el total de compres d'un client */
+/* Llista les diferents ulleres que ha venut un empleat durant un any */
+/* Llista els diferents proveïdors que han subministrat ulleres venudes amb èxit per l'òptica */
