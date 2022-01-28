@@ -11,7 +11,7 @@ CREATE TABLE proveidors (
   adress VARCHAR(100) NOT NULL,
   codiPostal INT NOT NULL,
   ciutat VARCHAR(50) NOT NULL,
-  pais VARCHAR(100) NOT NULL,
+  pais VARCHAR(100) NOT NULL
 );
 CREATE TABLE ulleres (
   idUll INT AUTO_INCREMENT PRIMARY KEY,
