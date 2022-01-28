@@ -13,7 +13,7 @@ CREATE TABLE ulleres (
   preu FLOAT NOT NULL
 );
 CREATE TABLE proveidors (
-  idProv INT AUTO_INCREMENT PRIMARY KEY,
+  idProv INT AUTO_INCREMENT,
   nom VARCHAR(40) NOT NULL,
   nif VARCHAR(20) NOT NULL,
   telefon INT NOT NULL,
@@ -38,13 +38,15 @@ CREATE TABLE clients (
   dataRegistre DATETIME,
   clientRecomanador INT,
   venedor VARCHAR(50) NOT NULL,
+  idVenedor INT AUTO_INCREMENT,
   dataCompra DATETIME,
   idUll INT NOT NULL,
+  idProv INT NOT NULL,
   FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
+  FOREIGN KEY (idProv) REFERENCES proveidors (idProv),
   FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
 );
-
-  INSERT INTO
+INSERT INTO
   ulleres VALUE(
     1,
     'oakley',
@@ -56,8 +58,7 @@ CREATE TABLE clients (
     'TRANSPARENT',
     223
   );
-
-  INSERT INTO
+INSERT INTO
   ulleres VALUE(
     2,
     'PRADA',
@@ -141,16 +142,115 @@ INSERT INTO
     'TRANSPARENT',
     564
   );
-
 INSERT INTO
   proveidors VALUE(
     1,
     'ulleres_barates1',
-    11111111,
-    '0.5',
-    '1.5',
-    'PASTA',
-    'NEGRA',
-    'TRANSPARENT',
-    365
+    '11111111A',
+    111111111,
+    'ulleres_barates1@ulleres_barates1.com',
+    111111110,
+    'ulleres 1',
+    08000,
+    'barcelona',
+    'pais',
+    2
+  );
+INSERT INTO
+  proveidors VALUE(
+    1,
+    'ulleres_barates1',
+    '11111111A',
+    111111111,
+    'ulleres_barates1@ulleres_barates1.com',
+    111111110,
+    'ulleres 1',
+    08000,
+    'barcelona',
+    'pais',
+    3
+  );
+INSERT INTO
+  proveidors VALUE(
+    1,
+    'ulleres_barates1',
+    '11111111A',
+    111111111,
+    'ulleres_barates1@ulleres_barates1.com',
+    111111110,
+    'ulleres 1',
+    08000,
+    'barcelona',
+    'pais',
+    6
+  );
+INSERT INTO
+  proveidors VALUE(
+    1,
+    'ulleres_barates1',
+    '11111111A',
+    111111111,
+    'ulleres_barates1@ulleres_barates1.com',
+    111111110,
+    'ulleres 1',
+    08000,
+    'barcelona',
+    'pais',
+    8
+  );
+INSERT INTO
+  proveidors VALUE(
+    2,
+    'ulleres_barates2',
+    '22222222B',
+    222222222,
+    'ulleres_barates2@ulleres_barates2.com',
+    222222220,
+    'ulleres 2',
+    08000,
+    'barcelona',
+    'pais',
+    1
+  );
+INSERT INTO
+  proveidors VALUE(
+    2,
+    'ulleres_barates2',
+    '22222222B',
+    222222222,
+    'ulleres_barates2@ulleres_barates2.com',
+    222222220,
+    'ulleres 2',
+    08000,
+    'barcelona',
+    'pais',
+    7
+  );
+INSERT INTO
+  proveidors VALUE(
+    2,
+    'ulleres_barates2',
+    '22222222B',
+    222222222,
+    'ulleres_barates2@ulleres_barates2.com',
+    222222220,
+    'ulleres 2',
+    08000,
+    'barcelona',
+    'pais',
+    4
+  );
+INSERT INTO
+  proveidors VALUE(
+    2,
+    'ulleres_barates2',
+    '22222222B',
+    222222222,
+    'ulleres_barates2@ulleres_barates2.com',
+    222222220,
+    'ulleres 2',
+    08000,
+    'barcelona',
+    'pais',
+    5
   );
