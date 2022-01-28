@@ -1,17 +1,6 @@
 DROP DATABASE IF EXISTS cul_ampolla;
 CREATE DATABASE cul_ampolla;
 USE cul_ampolla;
-CREATE TABLE ulleres (
-  idUll INT AUTO_INCREMENT PRIMARY KEY,
-  marca VARCHAR(40) NOT NULL,
-  model VARCHAR(40),
-  graduacioUd VARCHAR(60) NOT NULL,
-  graduacioUe VARCHAR(60) NOT NULL,
-  tipusMuntura ENUM ('PASTA', 'FLOTANT', 'METÀL·LICA'),
-  colorMuntura VARCHAR(50) NOT NULL,
-  colorVidres VARCHAR(50) NOT NULL,
-  preu FLOAT NOT NULL
-);
 CREATE TABLE proveidors (
   idProv INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(40) NOT NULL,
@@ -23,8 +12,19 @@ CREATE TABLE proveidors (
   codiPostal INT NOT NULL,
   ciutat VARCHAR(50) NOT NULL,
   pais VARCHAR(100) NOT NULL,
-  idUll INT NOT NULL,
-  FOREIGN KEY (idUll) REFERENCES ulleres (idUll)
+);
+CREATE TABLE ulleres (
+  idUll INT AUTO_INCREMENT PRIMARY KEY,
+  marca VARCHAR(40) NOT NULL,
+  model VARCHAR(40),
+  graduacioUd VARCHAR(60) NOT NULL,
+  graduacioUe VARCHAR(60) NOT NULL,
+  tipusMuntura ENUM ('PASTA', 'FLOTANT', 'METÀL·LICA'),
+  colorMuntura VARCHAR(50) NOT NULL,
+  colorVidres VARCHAR(50) NOT NULL,
+  preu FLOAT NOT NULL,
+  idProv INT NOT NULL,
+  FOREIGN KEY (idProv) REFERENCES proveidors (idProv)
 );
 CREATE TABLE clients (
   idClient INT AUTO_INCREMENT PRIMARY KEY,
@@ -167,8 +167,7 @@ INSERT INTO
     'pais',
     1
   );
-
-  INSERT INTO
+INSERT INTO
   clients VALUE(
     1,
     'client 1',
