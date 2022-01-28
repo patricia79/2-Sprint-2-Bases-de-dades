@@ -285,42 +285,7 @@ INSERT INTO
     '2021-02-08',
     null
   );
-INSERT INTO
-  facturaPart VALUE(1, 1, 'Venedor2', '2022-01-07');
-INSERT INTO
-  facturaPart VALUE(1, 2, 'Venedor2', '2022-01-04');
-INSERT INTO
-  facturaPart VALUE(1, 5, 'Venedor1', '2021-11-03');
-INSERT INTO
-  facturaPart VALUE(1, 8, 'Venedor2', '2021-01-04');
-INSERT INTO
-  facturaPart VALUE(2, 2, 'Venedor1', '2021-10-31');
-INSERT INTO
-  facturaPart VALUE(2, 4, 'Venedor1', '2021-12-31');
-INSERT INTO
-  facturaPart VALUE(3, 3, 'Venedor2', '2021-02-07');
-INSERT INTO
-  facturaPart VALUE(4, 7, 'Venedor1', '2022-01-04');
-INSERT INTO
-  facturaPart VALUE(5, 9, 'Venedor1', '2021-05-31');
-INSERT INTO
-  facturaPart VALUE(6, 6, 'Venedor2', '2021-08-31');
-INSERT INTO
-  facturaPart VALUE(7, 9, 'Venedor1', '2021-04-09');
-INSERT INTO
-  facturaprov VALUE(1, 1, '2022-01-07');
-INSERT INTO
-  facturaprov VALUE(2, 2, '2021-01-07');
-INSERT INTO
-  facturaprov VALUE(3, 3, '2021-12-07');
-INSERT INTO
-  factura_ulleres VALUE(1, 1);
-INSERT INTO
-  factura_ulleres VALUE(1, 2);
-INSERT INTO
-  factura_ulleres VALUE(2, 3);
-INSERT INTO
-  factura_ulleres VALUE(3, 4);
+
 # Queries
   # Query 1
 SELECT
