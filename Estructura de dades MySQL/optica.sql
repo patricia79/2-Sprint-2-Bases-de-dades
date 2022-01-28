@@ -13,7 +13,7 @@ CREATE TABLE ulleres (
   preu FLOAT NOT NULL
 );
 CREATE TABLE proveidors (
-  idProv INT AUTO_INCREMENT,
+  idProv INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(40) NOT NULL,
   nif VARCHAR(20) NOT NULL,
   telefon INT NOT NULL,
@@ -166,18 +166,4 @@ INSERT INTO
     'barcelona',
     'pais',
     1
-  );
-INSERT INTO
-  proveidors VALUE(
-    2,
-    'ulleres_barates2',
-    '22222222B',
-    222222222,
-    'ulleres_barates2@ulleres_barates2.com',
-    222222220,
-    'ulleres 2',
-    08000,
-    'barcelona',
-    'pais',
-    7
   );
