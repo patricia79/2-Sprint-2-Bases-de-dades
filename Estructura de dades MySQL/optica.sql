@@ -167,21 +167,6 @@ INSERT INTO
     'pais',
     1
   );
-INSERT INTO
-  proveidors VALUE(
-    2,
-    'ulleres_barates2',
-    '22222222B',
-    222222222,
-    'ulleres_barates2@ulleres_barates2.com',
-    222222220,
-    'ulleres 2',
-    08000,
-    'barcelona',
-    'pais',
-    7
-  );
-
   INSERT INTO
   clients VALUE(
     1,
