@@ -43,19 +43,7 @@ CREATE TABLE clients (
   FOREIGN KEY (idUll) REFERENCES ulleres (idUll),
   FOREIGN KEY (clientRecomanador) REFERENCES clients (idClient)
 );
-INSERT INTO
-  ulleres VALUE(
-    1,
-    'oakley',
-    'oak1',
-    '0.5',
-    '0.25',
-    'FLOTANT',
-    'TRANSPARENT',
-    'TRANSPARENT',
-    223,
-    2
-  );
+
 INSERT INTO
   ulleres VALUE(
     2,
@@ -188,4 +176,4 @@ INSERT INTO
     'venedor1',
     '2021-11-30',
     1
-  );
+  );INSERT INTO   ulleres VALUE(     1,     'oakley',     'oak1',     '0.5',     '0.25',     'FLOTANT',     'TRANSPARENT',     'TRANSPARENT',     223,     2   )
