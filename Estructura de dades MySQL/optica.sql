@@ -167,6 +167,7 @@ INSERT INTO
     'pais',
     1
   );
+
   INSERT INTO
   clients VALUE(
     1,
