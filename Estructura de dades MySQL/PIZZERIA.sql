@@ -178,14 +178,13 @@ VALUES (1, 1, 1),
 
 # Query 1
 
- /* Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
-SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda' AND  nomProv= 'Barcelona' ; 
+ /* Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat
+SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda' AND  nomProv= 'Barcelona' ; */
 
 # Query 2
 
 /* Llista quantes comandes ha efectuat un determinat empleat */
-SELECT distinct comandes.idcomanda
-FROM pizzeria.comandes INNER JOIN cul_ampolla.ulleres ON cul_ampolla.factura.idUll = cul_ampolla.ulleres.idUll
-WHERE repartidor = '2' ;
+SELECT DISTINCT idcomanda FROM comandes WHERE repartidor = 8;
+
 
 
