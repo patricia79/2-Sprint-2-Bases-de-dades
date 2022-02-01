@@ -178,8 +178,15 @@ VALUES (1, 1, 1),
 
 # Query 1
 
- /* Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat
-SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda' AND  nomProv= 'Barcelona' ; */
+ /* Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat*/
+/*SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda'  SELECT columns
+FROM table1 
+INNER JOIN table2
+ON table1.column = .column  nomLocal= 'Igualada' ; */
+
+SELECT id_producte, idbotiga
+FROM productes_demanats, comandes
+WHERE productes_demanats.idcomanda = comandes.idcomanda;
 
 # Query 2
 
