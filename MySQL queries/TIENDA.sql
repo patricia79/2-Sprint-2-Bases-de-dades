@@ -105,7 +105,7 @@ necessitaria GROUP BY.
 pel nom del fabricador, per ordre alfabètic.*/
 /*Retorna una llista amb el codi del producte, nom del producte, codi del fabricador i nom del fabricador, de tots els productes de 
 la base de dades.*/
-#R#etorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
+#Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
 #Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més car.
 #Retorna una llista de tots els productes del fabricador Lenovo.
 #Retorna una llista de tots els productes del fabricant Crucial que tinguin un preu major que 200€.
