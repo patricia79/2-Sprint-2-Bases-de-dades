@@ -96,15 +96,27 @@ SELECT * FROM fabricante LIMIT 3, 2;
 
 /*Llista el nom i el preu del producto més barat. (Utilitzi solament les clàusules ORDER BY i LIMIT). NOTA: Aquí no podria usar 
 MIN(preu), necessitaria GROUP BY*/
+SELECT nombre, precio FROM producto ORDER BY precio LIMIT 1;
 
 /*Llista el nom i el preu del producto més car. (Utilitzi solament les clàusules ORDER BY i LIMIT). NOTA: Aquí no podria usar MAX(preu), 
-necessitaria GROUP BY.
+necessitaria GROUP BY.*/
+SELECT nombre, precio FROM producto ORDER BY precio DESC LIMIT 1;
+
 #Llista el nom de tots els productos del fabricant el codi de fabricant del qual és igual a 2.
+SELECT nombre FROM fabricante WHERE codigo = 2;
+
 #Retorna una llista amb el nom del producte, preu i nom de fabricant de tots els productes de la base de dades.
+SELECT producto.nombre, producto.precio, fabricante.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante
+ORDER BY producto.nombre;
 /*Retorna una llista amb el nom del producte, preu i nom de fabricant de tots els productes de la base de dades. Ordeni el resultat 
 pel nom del fabricador, per ordre alfabètic.*/
+SELECT fabricante.nombre, producto.precio, producto.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante
+ORDER BY fabricante.nombre;
 /*Retorna una llista amb el codi del producte, nom del producte, codi del fabricador i nom del fabricador, de tots els productes de 
-la base de dades.*/
+la base de dades. NONONONO*/
+SELECT producto.codigo,producto.nombre, fabricante.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante
+ORDER BY producto.codigo;
+
 #Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
 #Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més car.
 #Retorna una llista de tots els productes del fabricador Lenovo.
