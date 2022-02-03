@@ -260,13 +260,13 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
 
 
 /* 1 Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els alumnes. El llistat haurà d'estar ordenat 
-alfabèticament de menor a major pel primer cognom, segon cognom i nom.  repasar NONONONNONO 
+alfabèticament de menor a major pel primer cognom, segon cognom i nom.*/
 
 SELECT pers.apellido1, pers.apellido2, pers.nombre FROM persona pers INNER JOIN alumno_se_matricula_asignatura asig 
-ON pers.id = asig.id_alumno ORDER BY pers.apellido1, pers.apellido2, pers.nombre;*/
+ON pers.id = asig.id_alumno ORDER BY pers.apellido1, pers.apellido2, pers.nombre;
 
-/*# 2 Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
-SELECT pers.nombre, pers.apellido1, pers.apellido2 FROM persona pers INNER JOIN alumno_se_matricula_asignatura al ON pers.id = al.id_alumno WHERE pers.telefono IS NULL;
+# 2 Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
+SELECT p.nombre, p.apellido1, apellido2 FROM persona p INNER JOIN alumno_se_matricula_asignatura a ON p.id = a.id_alumno WHERE p.telefono IS NULL;
 
 # 3 Retorna el llistat dels alumnes que van néixer en 1999.
 # 4 Retorna el llistat de professors que no han donat d'alta el seu número de telèfon en la base de dades i a més la seva nif acaba en K.
