@@ -265,7 +265,7 @@ alfabèticament de menor a major pel primer cognom, segon cognom i nom.  repasar
 SELECT pers.apellido1, pers.apellido2, pers.nombre FROM persona pers INNER JOIN alumno_se_matricula_asignatura asig 
 ON pers.id = asig.id_alumno ORDER BY pers.apellido1, pers.apellido2, pers.nombre;*/
 
-# 2 Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
+/*# 2 Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
 SELECT pers.nombre, pers.apellido1, pers.apellido2 FROM persona pers INNER JOIN alumno_se_matricula_asignatura al ON pers.id = al.id_alumno WHERE pers.telefono IS NULL;
 
 # 3 Retorna el llistat dels alumnes que van néixer en 1999.
