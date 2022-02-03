@@ -266,20 +266,21 @@ SELECT apellido1, apellido2, nombre FROM persona WHERE tipo = 'alumno' ORDER BY 
 # 2 Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
 SELECT apellido1, apellido2, nombre FROM persona WHERE tipo = 'alumno' and telefono IS NULL;
 
-
 # 3 Retorna el llistat dels alumnes que van néixer en 1999.
-
+SELECT * FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento LIKE "1999%";
 
 # 4 Retorna el llistat de professors que no han donat d'alta el seu número de telèfon en la base de dades i a més la seva nif acaba en K.
-
+SELECT apellido1, apellido2, nombre, nif FROM persona WHERE tipo = 'profesor' and telefono IS NULL AND nif LIKE "%K";
 
 # 5 Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre,en el tercer curs del grau que té l'identificador 7
-
+SELECT * FROM asignatura WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7;
 
 /* 6 Retorna un llistat dels professors juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre 
 columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels 
-cognoms i el nom.*/
+cognoms i el nom.   REPASAR  NONONONO
 
+SELECT apellido1, apellido2, nombre, nombre FROM persona  JOIN profesor ON id = id_profesor JOIN departamento
+ON id = id_departamento ORDER BY apellido1, apellido2, nombre;*/
 
 # 7 Retorna un llistat amb el nom de les assignatures, any d'inici i any de fi del curs escolar de l'alumne amb nif 26902806M.
 
@@ -290,8 +291,6 @@ en Enginyeria Informàtica (Pla 2015).*/
 
 # 9 Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
 
-
-
 #  Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 /*  10 Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. 
 El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, 
@@ -299,9 +298,8 @@ nom del departament, primer cognom, segon cognom i nom del professor. El resulta
 pel nom del departament, cognoms i el nom.*/
 
 
-
 # 11 Retorna un llistat amb els professors que no estan associats a un departament.
-
+SELECT * FROM persona RIGHT JOIN profesor ON id = id_profesor WHERE tipo = 'profesor' AND id_profesor IS NULL;
 
 # 12 Retorna un llistat amb els departaments que no tenen professors associats.
 
