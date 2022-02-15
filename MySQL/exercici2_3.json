@@ -1,0 +1,163 @@
+db.dropDatabase();
+
+
+[{
+  "_id": ObjectId("61f117e27e1c183ed2ff027b"),
+  "client": "client1",
+  "name": "client1",
+  "telefon": "111111111",
+  "correu_electronic": "client1@client1.com",
+  "ulleres": {
+    "idull": "1",
+    "marca": "D&G",
+    "modelo": "mimo2",
+    "grad ud": "2.25",
+    "grad ue": "2",
+    "tipus muntura": "metalica",
+    "color munt": "plata",
+    "color vidre": "transparent",
+    "preu": "123"
+  },
+  "id_client": 1
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff027c"),
+  "nameclient": "client2",
+  "telefon": "222222222",
+  "correu_electronic": "client2@client2.com",
+  "adress": "adress client 2",
+  "codiPostal": "08200",
+  "ciutat": "ciutat",
+  "pais": "pais",
+  "ulleres": {
+    "idull": "2",
+    "marca": "prada",
+    "modelo": "LKIOP',",
+    "grad ud": "2.5",
+    "grad ue": "2",
+    "tipus muntura": "pasta",
+    "color munt": "blanca",
+    "color vidre": "TRANSPARENT",
+    "preu": "345"
+  }
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff027d"),
+  "idull": "3",
+  "marca": "oakley",
+  "modelo": "KJU3',",
+  "grad ud": "1.25",
+  "grad ue": "1",
+  "tipus muntura": "flotant",
+  "color munt": "NEGRA',",
+  "color vidre": "TRANSPARENT',",
+  "preu": "567"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff027e"),
+  "idull": "4",
+  "marca": "prada",
+  "modelo": "pr34",
+  "grad ud": "1.5",
+  "grad ue": "1",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345",
+  "client": ""
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff027f"),
+  "idull": "5",
+  "marca": "hawkers",
+  "modelo": "hwk",
+  "grad ud": "3.5",
+  "grad ue": "3",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0280"),
+  "idull": "6",
+  "marca": "hawkers",
+  "modelo": "hwk",
+  "grad ud": "3.25",
+  "grad ue": "3",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0281"),
+  "idull": "7",
+  "marca": "prada",
+  "modelo": "pr34",
+  "grad ud": "0.5",
+  "grad ue": "0.75",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0282"),
+  "idull": "8",
+  "marca": "D&G",
+  "modelo": "mimo2",
+  "grad ud": "4.5",
+  "grad ue": "4",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0283"),
+  "idull": "9",
+  "marca": "D&G",
+  "modelo": "mimo2",
+  "grad ud": "0.75",
+  "grad ue": "1",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0284"),
+  "idull": "10",
+  "marca": "D&G",
+  "modelo": "mimo2",
+  "grad ud": "1.25",
+  "grad ue": "1",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0285"),
+  "idull": "11",
+  "marca": "hawkers",
+  "modelo": "hwk",
+  "grad ud": "0.5",
+  "grad ue": "0",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0286"),
+  "idull": "12",
+  "marca": "prada",
+  "modelo": "LKIOP',",
+  "grad ud": "0.75",
+  "grad ue": "1",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345"
+},{
+  "_id": ObjectId("61f117e27e1c183ed2ff0287"),
+  "marca": "oakley",
+  "modelo": "KJU3',",
+  "grad ud": "0.25",
+  "grad ue": "0",
+  "tipus muntura": "flotant",
+  "color munt": "NEGRA',",
+  "color vidre": "TRANSPARENT',",
+  "preu": "567"
+}]
