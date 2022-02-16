@@ -1,0 +1,16 @@
+[{"nameclient": "client1",
+  "telefon": "111111111",
+  "correu_electronic": "client1@client1.com",
+  "codiPostal": "08100",
+  "ciutat": "ciutat",
+  "pais": "pais"
+},
+{
+    "nameclient": "client2",
+    "telefon": "222222222",
+    "correu_electronic": "client2@client2.com",
+    "adress": "adress client 2",
+    "codiPostal": "08200",
+    "ciutat": "ciutat",
+    "pais": "pais"
+}]

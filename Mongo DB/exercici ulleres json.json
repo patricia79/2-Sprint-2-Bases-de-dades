@@ -1,0 +1,122 @@
+[{
+
+    "marca": "D&G",
+    "modelo": "mimo2",
+    "grad ud": "2.25",
+    "grad ue": "2",
+    "tipus muntura": "metalica",
+    "color munt": "plata",
+    "color vidre": "transparent",
+    "preu": "123"
+
+},{
+
+    "marca": "prada",
+    "model": "LKIOP',",
+    "grad ud": "2.5",
+    "grad ue": "2",
+    "tipus muntura": "pasta",
+    "color munt": "blanca",
+    "color vidre": "TRANSPARENT",
+    "preu": "345"
+  }
+,{
+  "marca": "oakley",
+  "model": "KJU3',",
+  "grad ud": "1.25",
+  "grad ue": "1",
+  "tipus muntura": "flotant",
+  "color munt": "NEGRA',",
+  "color vidre": "TRANSPARENT',",
+  "preu": "567"
+},{
+  "marca": "prada",
+  "model": "pr34",
+  "grad ud": "1.5",
+  "grad ue": "1",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345"
+ },{
+  "marca": "hawkers",
+  "model": "hwk",
+  "grad ud": "3.5",
+  "grad ue": "3",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "marca": "hawkers",
+  "model": "hwk",
+  "grad ud": "3.25",
+  "grad ue": "3",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "marca": "prada",
+  "model": "pr34",
+  "grad ud": "0.5",
+  "grad ue": "0.75",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345"
+},{
+  "marca": "D&G",
+  "model": "mimo2",
+  "grad ud": "4.5",
+  "grad ue": "4",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "marca": "D&G",
+  "model": "mimo2",
+  "grad ud": "0.75",
+  "grad ue": "1",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "marca": "D&G",
+  "model": "mimo2",
+  "grad ud": "1.25",
+  "grad ue": "1",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "123"
+},{
+  "marca": "hawkers",
+  "model": "hwk",
+  "grad ud": "0.5",
+  "grad ue": "0",
+  "tipus muntura": "METÀL·LICA',",
+  "color munt": "plata",
+  "color vidre": "TRANSPARENT',",
+  "preu": "234"
+},{
+  "marca": "prada",
+  "model": "LKIOP',",
+  "grad ud": "0.75",
+  "grad ue": "1",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT',",
+  "preu": "345"
+},{
+   "marca": "oakley",
+  "model": "KJU3',",
+  "grad ud": "0.25",
+  "grad ue": "0",
+  "tipus muntura": "flotant",
+  "color munt": "NEGRA',",
+  "color vidre": "TRANSPARENT',",
+  "preu": "567"
+}]

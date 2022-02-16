@@ -1,14 +1,12 @@
-db.dropDatabase();
-
-
 [{
   "_id": ObjectId("61f117e27e1c183ed2ff027b"),
-  "client": "client1",
-  "name": "client1",
+  "nameclient": "client1",
   "telefon": "111111111",
   "correu_electronic": "client1@client1.com",
+  "codiPostal": "08100",
+  "ciutat": "ciutat",
+  "pais": "pais",
   "ulleres": {
-    "idull": "1",
     "marca": "D&G",
     "modelo": "mimo2",
     "grad ud": "2.25",
@@ -17,8 +15,8 @@ db.dropDatabase();
     "color munt": "plata",
     "color vidre": "transparent",
     "preu": "123"
-  },
-  "id_client": 1
+  }
+ 
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff027c"),
   "nameclient": "client2",
@@ -29,7 +27,6 @@ db.dropDatabase();
   "ciutat": "ciutat",
   "pais": "pais",
   "ulleres": {
-    "idull": "2",
     "marca": "prada",
     "modelo": "LKIOP',",
     "grad ud": "2.5",
@@ -64,8 +61,7 @@ db.dropDatabase();
   "client": ""
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff027f"),
-  "idull": "5",
-  "marca": "hawkers",
+   "marca": "hawkers",
   "modelo": "hwk",
   "grad ud": "3.5",
   "grad ue": "3",
@@ -75,8 +71,7 @@ db.dropDatabase();
   "preu": "234"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0280"),
-  "idull": "6",
-  "marca": "hawkers",
+   "marca": "hawkers",
   "modelo": "hwk",
   "grad ud": "3.25",
   "grad ue": "3",
@@ -86,7 +81,6 @@ db.dropDatabase();
   "preu": "234"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0281"),
-  "idull": "7",
   "marca": "prada",
   "modelo": "pr34",
   "grad ud": "0.5",
@@ -97,7 +91,6 @@ db.dropDatabase();
   "preu": "345"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0282"),
-  "idull": "8",
   "marca": "D&G",
   "modelo": "mimo2",
   "grad ud": "4.5",
@@ -108,7 +101,6 @@ db.dropDatabase();
   "preu": "123"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0283"),
-  "idull": "9",
   "marca": "D&G",
   "modelo": "mimo2",
   "grad ud": "0.75",
@@ -119,7 +111,6 @@ db.dropDatabase();
   "preu": "123"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0284"),
-  "idull": "10",
   "marca": "D&G",
   "modelo": "mimo2",
   "grad ud": "1.25",
@@ -130,8 +121,7 @@ db.dropDatabase();
   "preu": "123"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0285"),
-  "idull": "11",
-  "marca": "hawkers",
+   "marca": "hawkers",
   "modelo": "hwk",
   "grad ud": "0.5",
   "grad ue": "0",
@@ -141,8 +131,7 @@ db.dropDatabase();
   "preu": "234"
 },{
   "_id": ObjectId("61f117e27e1c183ed2ff0286"),
-  "idull": "12",
-  "marca": "prada",
+   "marca": "prada",
   "modelo": "LKIOP',",
   "grad ud": "0.75",
   "grad ue": "1",

@@ -1,0 +1,16 @@
+[{"name_prov": "prov1",
+  "telefon": "111111111",
+  "correu_electronic": "prov1@prov1.com",
+  "codiPostal": "08100",
+  "ciutat": "ciutat",
+  "pais": "pais"
+},
+{
+    "name_prov": "prov2",
+    "telefon": "222222222",
+    "correu_electronic": "prov2@prov2.com",
+    "adress": "adress prov2",
+    "codiPostal": "08200",
+    "ciutat": "ciutat",
+    "pais": "pais"
+}]
