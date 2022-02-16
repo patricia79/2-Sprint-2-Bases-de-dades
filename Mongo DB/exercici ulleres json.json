@@ -1,26 +1,37 @@
 [{
-
-    "marca": "D&G",
-    "modelo": "mimo2",
-    "grad ud": "2.25",
-    "grad ue": "2",
-    "tipus muntura": "metalica",
-    "color munt": "plata",
-    "color vidre": "transparent",
-    "preu": "123"
-
-},{
-
-    "marca": "prada",
-    "model": "LKIOP',",
-    "grad ud": "2.5",
-    "grad ue": "2",
-    "tipus muntura": "pasta",
-    "color munt": "blanca",
-    "color vidre": "TRANSPARENT",
-    "preu": "345"
+  "_id": {
+    "$oid": "620cca302991df4442fe1178"
+  },
+  "marca": "D&G",
+  "modelo": "mimo2",
+  "grad ud": "2.25",
+  "grad ue": "2",
+  "tipus muntura": "metalica",
+  "color munt": "plata",
+  "color vidre": "transparent",
+  "preu": "123",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
   }
-,{
+},{
+  "_id": {
+    "$oid": "620cca302991df4442fe1179"
+  },
+  "marca": "prada",
+  "model": "LKIOP',",
+  "grad ud": "2.5",
+  "grad ue": "2",
+  "tipus muntura": "pasta",
+  "color munt": "blanca",
+  "color vidre": "TRANSPARENT",
+  "preu": "345",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1188"
+  }
+},{
+  "_id": {
+    "$oid": "620cca302991df4442fe117a"
+  },
   "marca": "oakley",
   "model": "KJU3',",
   "grad ud": "1.25",
@@ -28,8 +39,14 @@
   "tipus muntura": "flotant",
   "color munt": "NEGRA',",
   "color vidre": "TRANSPARENT',",
-  "preu": "567"
+  "preu": "567",
+  "proveidor": {
+    "$oid": "620ce1ec2991df4442fe11f2"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe117b"
+  },
   "marca": "prada",
   "model": "pr34",
   "grad ud": "1.5",
@@ -37,8 +54,14 @@
   "tipus muntura": "pasta",
   "color munt": "blanca",
   "color vidre": "TRANSPARENT',",
-  "preu": "345"
- },{
+  "preu": "345",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1188"
+  }
+},{
+  "_id": {
+    "$oid": "620cca302991df4442fe117c"
+  },
   "marca": "hawkers",
   "model": "hwk",
   "grad ud": "3.5",
@@ -46,8 +69,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "234"
+  "preu": "234",
+  "proveidor": {
+    "$oid": "620ce1ec2991df4442fe11f2"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe117d"
+  },
   "marca": "hawkers",
   "model": "hwk",
   "grad ud": "3.25",
@@ -55,8 +84,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "234"
+  "preu": "234",
+  "proveidor": {
+    "$oid": "620ce1ec2991df4442fe11f2"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe117e"
+  },
   "marca": "prada",
   "model": "pr34",
   "grad ud": "0.5",
@@ -64,8 +99,14 @@
   "tipus muntura": "pasta",
   "color munt": "blanca",
   "color vidre": "TRANSPARENT',",
-  "preu": "345"
+  "preu": "345",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1188"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe117f"
+  },
   "marca": "D&G",
   "model": "mimo2",
   "grad ud": "4.5",
@@ -73,8 +114,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "123"
+  "preu": "123",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe1180"
+  },
   "marca": "D&G",
   "model": "mimo2",
   "grad ud": "0.75",
@@ -82,8 +129,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "123"
+  "preu": "123",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe1181"
+  },
   "marca": "D&G",
   "model": "mimo2",
   "grad ud": "1.25",
@@ -91,8 +144,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "123"
+  "preu": "123",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe1182"
+  },
   "marca": "hawkers",
   "model": "hwk",
   "grad ud": "0.5",
@@ -100,8 +159,14 @@
   "tipus muntura": "METÀL·LICA',",
   "color munt": "plata",
   "color vidre": "TRANSPARENT',",
-  "preu": "234"
+  "preu": "234",
+  "proveidor": {
+    "$oid": "620ce1ec2991df4442fe11f2"
+  }
 },{
+  "_id": {
+    "$oid": "620cca302991df4442fe1183"
+  },
   "marca": "prada",
   "model": "LKIOP',",
   "grad ud": "0.75",
@@ -109,14 +174,23 @@
   "tipus muntura": "pasta",
   "color munt": "blanca",
   "color vidre": "TRANSPARENT',",
-  "preu": "345"
+  "preu": "345",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1188"
+  }
 },{
-   "marca": "oakley",
+  "_id": {
+    "$oid": "620cca302991df4442fe1184"
+  },
+  "marca": "oakley",
   "model": "KJU3',",
   "grad ud": "0.25",
   "grad ue": "0",
   "tipus muntura": "flotant",
   "color munt": "NEGRA',",
   "color vidre": "TRANSPARENT',",
-  "preu": "567"
+  "preu": "567",
+  "proveidor": {
+    "$oid": "620ce1ec2991df4442fe11f2"
+  }
 }]

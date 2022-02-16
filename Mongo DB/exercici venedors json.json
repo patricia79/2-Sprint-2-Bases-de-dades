@@ -1,7 +1,11 @@
 [{
-
-   "venedor": "venedor1"
-   },{
-    "venedor": "venedor2"
-      }
-]
+  "_id": {
+    "$oid": "620cdbf02991df4442fe11bd"
+  },
+  "venedor": "venedor1"
+},{
+  "_id": {
+    "$oid": "620cdbf02991df4442fe11be"
+  },
+  "venedor": "venedor2"
+}]
