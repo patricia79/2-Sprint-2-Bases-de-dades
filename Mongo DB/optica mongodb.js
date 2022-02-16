@@ -1,6 +1,4 @@
 
-
-
 db.clients.insertMany([{
 
   "_id": ObjectId("620cca122991df4442fe1171"),
@@ -82,6 +80,7 @@ db.proveidors.insertMany([{
   "name_prov": "prov1",
   "telefon": "111111111",
   "correu_electronic": "prov1@prov1.com",
+  "adress": "adress prov1",
   "codiPostal": "08100",
   "ciutat": "ciutat",
   "pais": "pais"
@@ -99,6 +98,7 @@ db.proveidors.insertMany([{
   "name_prov": "prov3",
   "telefon": "333333333",
   "correu_electronic": "prov3@prov3.com",
+  "adress": "adress prov3",
   "codiPostal": "08300",
   "ciutat": "ciutat",
   "pais": "pais"
