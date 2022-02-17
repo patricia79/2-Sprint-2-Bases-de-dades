@@ -1,8 +1,7 @@
-
 db.clients.insertMany([{
 
   "_id": ObjectId("620cca122991df4442fe1171"),
-  "nameclient": "client1",
+  "nom_client": "client1",
   "telefon": "111111111",
   "correu_electronic": "client1@client1.com",
   "codiPostal": "08100",
