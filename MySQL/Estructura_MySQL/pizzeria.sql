@@ -169,8 +169,8 @@ VALUES (1, 1, 1),
 
 # Query 1
 
- /*Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat
-SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda' AND  nomProv= 'Barcelona' ;*/
+/* # Llista quants productes del tipus 'begudes' s'han venut en una determinada localitat
+SELECT COUNT(*) FROM pizzeria.productes WHERE tipus_producte = 'beguda' AND  nomProv= 'Barcelona' ;
 
 # Query 2
 
