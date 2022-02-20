@@ -4,8 +4,8 @@ CREATE DATABASE tienda CHARACTER SET utf8mb4;
 USE tienda;
 
 CREATE TABLE fabricante (
-  codigo INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL
+    codigo INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE producto (
@@ -116,53 +116,56 @@ SELECT fabricante.nombre, producto.precio, producto.nombre FROM producto INNER J
 ORDER BY fabricante.nombre;
 
 /*23 Retorna una llista amb el codi del producte, nom del producte, codi del fabricador i nom del fabricador, de tots els productes de 
-la base de dades. NONONONO
+la base de dades. NO FUNCIONA- REPASAR
 SELECT producto.codigo,producto.nombre, fabricante.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante
 ORDER BY producto.codigo*/
 
 #24 Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
-
+SELECT prod.nombre, precio, fab.nombre FROM producto prod INNER JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo ORDER BY precio ASC LIMIT 1;
 
 #25 Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més car.
-
+SELECT prod.nombre, precio, fab.nombre FROM producto prod INNER JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo ORDER BY precio DESC LIMIT 1;
 
 #26 Retorna una llista de tots els productes del fabricador Lenovo.
-
+SELECT prod.* FROM producto prod INNER JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Lenovo';
 
 #27 Retorna una llista de tots els productes del fabricant Crucial que tinguin un preu major que 200€.
-
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Crucial' AND prod.precio > 200;
 
 #28 Retorna un llistat amb tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Sense utilitzar l'operador IN.
-
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Asus' OR fab.nombre = 'Hewlett-Packard' OR fab.nombre = 'Seagate';
 
 #29 Retorna un llistat amb tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Utilitzant l'operador IN.
 
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre IN ('Asus', 'Hewlett-Packard', 'Seagate');
 
 #30 Retorna un llistat amb el nom i el preu de tots els productes dels fabricants el nom dels quals acabi per la vocal e.
-
+SELECT prod.nombre, prod.precio FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE fab.nombre LIKE '%e';
 
 #31 Retorna un llistat amb el nom i el preu de tots els productes el nom de fabricant dels quals contingui el caràcter w en el seu nom.
-
+SELECT prod.nombre, prod.precio FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE fab.nombre LIKE '%w%';
 
 /*32 Retorna un llistat amb el nom de producte, preu i nom de fabricant, de tots els productes que tinguin un preu major o igual a 180€. 
 Ordeni el resultat en primer lloc pel preu (en ordre descendent) i en segon lloc pel nom (en ordre ascendent)*/
-
+SELECT prod.nombre AS nombre_producto, prod.precio AS precio_producto, fab.nombre AS nombre_fabricante FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE precio >= 180 ORDER BY precio DESC, prod.nombre ASC;
 
 #33 Retorna un llistat amb el codi i el nom de fabricant, solament d'aquells fabricants que tenen productes associats en la base de dades.
-
+SELECT DISTINCT fab.* FROM fabricante fab JOIN producto prod ON fab.codigo = prod.codigo_fabricante;
 
 /*34 Retorna un llistat de tots els fabricants que existeixen en la base de dades, juntament amb els productes que té cadascun d'ells. 
 El llistat haurà de mostrar també aquells fabricants que no tenen productes associats.*/
-
+SELECT fab.nombre AS fabricante, prod.nombre AS producto FROM fabricante fab  LEFT JOIN producto prod ON prod.codigo_fabricante = fab.codigo;
 
 #35 Retorna un llistat on només apareguin aquells fabricants que no tenen cap producte associat.
-
+SELECT fab.nombre, prod.nombre FROM fabricante fab  LEFT JOIN producto prod ON prod.codigo_fabricante = fab.codigo  WHERE prod.codigo is NULL;
 
 #36 Retorna tots els productes del fabricador Lenovo. (Sense utilitzar INNER JOIN).
-
+SELECT fab.nombre, prod.nombre FROM fabricante fab, producto prod WHERE prod.codigo_fabricante = fab.codigo AND fab.nombre = 'Lenovo';
 
 /*37 Retorna totes les dades dels productes que tenen el mateix preu que el producte més car del fabricador Lenovo. (Sense utilitzar 
 INNER JOIN).*/
+
+SELECT * FROM producto WHERE precio = (SELECT MAX(precio) FROM producto WHERE codigo_fabricante = (SELECT codigo FROM fabricante WHERE nombre = 'Lenovo'));
 
 #38 Llista el nom del producte més car del fabricador Lenovo.
 SELECT nombre FROM producto prod WHERE prod.precio = (SELECT MAX(prod.precio) FROM producto prod 
