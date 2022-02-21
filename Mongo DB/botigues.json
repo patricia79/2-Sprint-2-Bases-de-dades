@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "620e363abadce9728393e320"
+  },
+  "adress": "adress botiga1",
+  "telefon": "111111111",
+  "codiPostal": "08100",
+  "id_local": {
+    "$oid": "620e316bbadce9728393e2c4"
+  }
+}]
