@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6212955f17fcef6543ac07e9"
+  },
+  "data_hora": "2021-01-28",
+  "lliurament": "domicili",
+  "preu_total": 53.5,
+  "id_prod_dem": {
+    "$oid": "6212926a17fcef6543ac07bb"
+  },
+  "treballador": {
+    "$oid": "62128a9617fcef6543ac0746"
+  },
+  "id_client": {
+    "$oid": "620e2ae1badce9728393e2b2"
+  }
+},{
+  "_id": {
+    "$oid": "62135ae101221abed27004cf"
+  },
+  "data_hora": "2021-02-28",
+  "lliurament": "botiga",
+  "preu_total": 25,
+  "id_prod_dem": {
+    "$oid": "62128e2517fcef6543ac07ae"
+  },
+  "treballador": null,
+  "id_client": {
+    "$oid": "620e2c8dbadce9728393e2b3"
+  }
+}]
