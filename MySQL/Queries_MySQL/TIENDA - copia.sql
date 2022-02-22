@@ -1,0 +1,42 @@
+
+SELECT nombre FROM producto;
+ SELECT nombre, precio FROM producto;
+SELECT * FROM producto;
+SELECT nombre, precio, precio * 1.13 FROM producto;
+SELECT nombre AS nom_de_producto, precio AS euros, precio * 1.088 AS dolars FROM producto; 
+SELECT UPPER(nombre), precio FROM producto;
+SELECT LOWER(nombre), precio FROM producto;
+SELECT nombre, LEFT(UPPER(nombre), 2) FROM fabricante;
+SELECT nombre, ROUND(precio) AS 'PREU APROX' FROM producto;
+SELECT nombre, TRUNCATE(precio, 0) FROM producto;
+SELECT codigo_fabricante FROM producto ORDER BY codigo_fabricante;
+SELECT DISTINCT codigo_fabricante FROM producto ORDER BY codigo_fabricante;
+SELECT nombre FROM fabricante ORDER BY nombre;
+SELECT nombre FROM fabricante ORDER BY nombre DESC;
+SELECT nombre FROM producto ORDER BY nombre, precio DESC;
+SELECT * FROM fabricante LIMIT 5;
+SELECT * FROM fabricante LIMIT 3, 2;
+SELECT nombre, precio FROM producto ORDER BY precio LIMIT 1;
+SELECT nombre, precio FROM producto ORDER BY precio DESC LIMIT 1;
+SELECT nombre FROM fabricante WHERE codigo = 2;
+SELECT producto.nombre, producto.precio, fabricante.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante ORDER BY producto.nombre;
+SELECT fabricante.nombre, producto.precio, producto.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante ORDER BY fabricante.nombre;
+SELECT producto.codigo,producto.nombre, fabricante.nombre FROM producto INNER JOIN fabricante ON fabricante.codigo = producto.codigo_fabricante ORDER BY producto.codigo;
+SELECT prod.nombre, precio, fab.nombre FROM producto prod INNER JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo ORDER BY precio ASC LIMIT 1;
+SELECT prod.nombre, precio, fab.nombre FROM producto prod INNER JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo ORDER BY precio DESC LIMIT 1;
+SELECT prod.* FROM producto prod INNER JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Lenovo';
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Crucial' AND prod.precio > 200;
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre = 'Asus' OR fab.nombre = 'Hewlett-Packard' OR fab.nombre = 'Seagate';
+SELECT prod.* FROM producto prod JOIN fabricante fab ON fab.codigo = prod.codigo_fabricante WHERE fab.nombre IN ('Asus', 'Hewlett-Packard', 'Seagate');
+SELECT prod.nombre, prod.precio FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE fab.nombre LIKE '%e';
+SELECT prod.nombre, prod.precio FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE fab.nombre LIKE '%w%';
+SELECT prod.nombre AS nombre_producto, prod.precio AS precio_producto, fab.nombre AS nombre_fabricante FROM producto prod JOIN fabricante fab ON prod.codigo_fabricante = fab.codigo WHERE precio >= 180 ORDER BY precio DESC, prod.nombre ASC;
+SELECT DISTINCT fab.* FROM fabricante fab JOIN producto prod ON fab.codigo = prod.codigo_fabricante;
+SELECT fab.nombre AS fabricante, prod.nombre AS producto FROM fabricante fab  LEFT JOIN producto prod ON prod.codigo_fabricante = fab.codigo;
+SELECT fab.nombre, prod.nombre FROM fabricante fab  LEFT JOIN producto prod ON prod.codigo_fabricante = fab.codigo  WHERE prod.codigo is NULL;
+SELECT fab.nombre, prod.nombre FROM fabricante fab, producto prod WHERE prod.codigo_fabricante = fab.codigo AND fab.nombre = 'Lenovo';
+SELECT * FROM producto WHERE precio = (SELECT MAX(precio) FROM producto WHERE codigo_fabricante = (SELECT codigo FROM fabricante WHERE nombre = 'Lenovo'));
+
+SELECT nombre FROM producto prod WHERE prod.precio = (SELECT MAX(prod.precio) FROM producto prod WHERE prod.codigo_fabricante = (SELECT fab.codigo FROM fabricante fab WHERE fab.nombre = 'Lenovo'));
+
+SELECT nombre FROM producto prod WHERE prod.precio = (SELECT MIN(prod.precio) FROM producto prod WHERE prod.codigo_fabricante = (SELECT fab.codigo FROM fabricante fab WHERE fab.nombre = 'Hewlett-Packard'));
