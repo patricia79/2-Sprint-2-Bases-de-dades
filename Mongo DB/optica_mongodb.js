@@ -11,18 +11,8 @@ db.clients.insertMany([{
   "data registre": "20-01-2021",
   "client_recom": null,
   "venedor": "venedor2",
-  "ulleres":{
+  "ulleres":[ObjectId("621bd63675fb67acae933ddb"), ObjectId("621bd6b475fb67acae933ddc")]
 
-    "marca": "D&G",
-    "modelo": "mimo2",
-    "grad ud": "2.25",
-    "grad ue": "2",
-    "tipus muntura": "metalica",
-    "color munt": "plata",
-    "color vidre": "transparent",
-    "preu": "123",
-    "proveidor": ObjectId("620ccae82991df4442fe1187")
-  }
   },
  {
   "_id": ObjectId("620cca122991df4442fe1172"),

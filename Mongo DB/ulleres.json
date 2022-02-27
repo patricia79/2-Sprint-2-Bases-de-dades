@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "621bd63675fb67acae933ddb"
+  },
+  "marca": "D&G",
+  "modelo": "mimo2",
+  "grad ud": "2.25",
+  "grad ue": "2",
+  "tipus muntura": "metalica",
+  "color munt": "plata",
+  "color vidre": "transparent",
+  "preu": "123",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
+  }
+},{
+  "_id": {
+    "$oid": "621bd6b475fb67acae933ddc"
+  },
+  "marca": "D&G",
+  "modelo": "mimo3",
+  "grad ud": "2.25",
+  "grad ue": "2",
+  "tipus muntura": "metalica",
+  "color munt": "negra",
+  "color vidre": "transparent",
+  "preu": "334",
+  "proveidor": {
+    "$oid": "620ccae82991df4442fe1187"
+  }
+}]
