@@ -11,7 +11,7 @@ db.clients.insertMany([{
   "data registre": "20-01-2021",
   "client_recom": null,
   "venedor": "venedor2",
-  "ulleres":[ObjectId("621bd63675fb67acae933ddb"), ObjectId("621bd6b475fb67acae933ddc")]
+  "ulleres":[ObjectId("621bd63675fb67acae933ddb")]
 
   },
  {
@@ -93,5 +93,64 @@ db.proveidors.insertMany([{
   "ciutat": "ciutat",
   "pais": "pais"
 }])
+
+"_id": ObjectId("620cca122991df4442fe1171"),
+nameclient
+:
+"client1"
+telefon
+:
+"111111111"
+correu_electronic
+:
+"client1@client1.com"
+codiPostal
+:
+"08100"
+ciutat
+:
+"ciutat"
+pais
+:
+"pais"
+data registre
+:
+"20-01-2021"
+client_recom
+:
+null
+venedor
+:
+"venedor2"
+ulleres
+:
+621bd63675fb67acae933ddb
+marca
+:
+"D&G"
+modelo
+:
+"mimo2"
+grad ud
+:
+"2.25"
+grad ue
+:
+"2"
+tipus muntura
+:
+"metalica"
+color munt
+:
+"plata"
+color vidre
+:
+"transparent"
+preu
+:
+"123"
+proveidor
+:
+620ccae82991df4442fe1187
 
   
