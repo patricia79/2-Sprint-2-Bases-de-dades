@@ -12,7 +12,6 @@ db.clients.insertMany([{
   "client_recom": null,
   "venedor": "venedor2",
   "ulleres":[ObjectId("621bd63675fb67acae933ddb")]
-
   },
  {
   "_id": ObjectId("620cca122991df4442fe1172"),
