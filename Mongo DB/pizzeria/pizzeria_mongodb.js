@@ -1,139 +1,135 @@
 
-db.productes.insertMany([{
- 
-  "_id": ObjectId("6212796617fcef6543ac071b"),
-  "tipus": "pizza",
-    "nom_producte": "producte",
-    "imatge": "imatge",
-    "descripcio": "descripcio",
-    "preu": 10,
-    "nom_cat": "categoria"
-  },{
-
-    "_id": ObjectId("62127a8c17fcef6543ac071c"),
-    "tipus": "burger",
-    "nom_producte": "producte",
-    "imatge": "imatge",
-    "descripcio": "descripcio",
-    "preu": 5.5,
-    "nom_cat": null
-      
-  },{
-
-    "_id": ObjectId("62127ac017fcef6543ac071d"),
-     "tipus": "beguda",
-    "nom_producte": "producte",
-    "imatge": "imatge",
-    "descripcio": "descripcio",
-    "preu": 2.5,
-    "nom_cat": null
-  }])
-
   db.provincies.insertMany([{
   
     "_id": ObjectId("620e2f91badce9728393e2b9"),
     "nom_prov": "Barcelona"
   }])
 
+  db.localitats.insertMany([{
 
-  "_id": ObjectId("620cca122991df4442fe1172"),
-  "nameclient": "client2",
-  "telefon": "222222222",
-  "correu_electronic": "client2@client2.com",
-  "adress": "adress client 2",
-  "codiPostal": "08200",
-  "ciutat": "ciutat",
-  "pais": "pais",
-  "data registre": "20-02-2021",
-  "client_recom": ObjectId("620cca122991df4442fe1171"),
-  "venedor": "venedor1",
-  "ulleres":[ObjectId("621bd6b475fb67acae933ddc")]
+        "_id": ObjectId("620e316bbadce9728393e2c4"),
+        "nom_loc": "Igualada",
+        "id_prov": "620e2f91badce9728393e2b9"
+      },{
+        "_id": ObjectId("62128d6117fcef6543ac0793"),
+        "nom_loc": "Badalona",
+        "id_prov": "620e2f91badce9728393e2b9"
+      }])
 
-}, {
+ db.botigues.insertMany([{
 
-  "_id": ObjectId("620d45effd3d1cb91d6abd73"),
-  "nameclient": "client3",
-  "telefon": "333333333",
-  "correu_electronic": "client3@client3.com",
-  "adress": "adress client 3",
-  "codiPostal": "08300",
-  "ciutat": "ciutat",
-  "pais": "pais",
-  "data registre": "20-03-2021",
-  "client_recom": ObjectId("620cca122991df4442fe1172"),
-  "venedor": "venedor3",
-  "ulleres":[ObjectId("621e0687bee9349940ad9b7d")]
+        "_id": ObjectId("620e363abadce9728393e320"),
+        "adress": "adress botiga1",
+        "telefon": "111111111",
+        "codiPostal": "08100",
+        "id_loc": ObjectId("620e316bbadce9728393e2c4"),
+        "id_prov": ObjectId("620e2f91badce9728393e2b9")
+       }])
 
-}])
+ db.treballadors.insertMany([{
 
+        "id_treballador": ObjectId("6212787617fcef6543ac0712"),
+        "nom": "treballadora1",
+        "nif": "11111111A",
+        "telefon": 111111111,
+        "carrec": "cuinera",
+        "id_botiga": ObjectId("620e363abadce9728393e320")
 
-db.proveidors.insertMany([{
+       },{
 
-  "_id": ObjectId("620ccae82991df4442fe1187"),
-  "name_prov": "prov1",
-  "telefon": "111111111",
-  "correu_electronic": "prov1@prov1.com",
-  "adress": "adress prov1",
-  "codiPostal": "08100",
-  "ciutat": "ciutat",
-  "pais": "pais"
-}, {
-  "_id": ObjectId("620ccae82991df4442fe1188"),
-  "name_prov": "prov2",
-  "telefon": "222222222",
-  "correu_electronic": "prov2@prov2.com",
-  "adress": "adress prov2",
-  "codiPostal": "08200",
-  "ciutat": "ciutat",
-  "pais": "pais"
-}, {
-  "_id": ObjectId("620ce1ec2991df4442fe11f2"),
-  "name_prov": "prov3",
-  "telefon": "333333333",
-  "correu_electronic": "prov3@prov3.com",
-  "adress": "adress prov3",
-  "codiPostal": "08300",
-  "ciutat": "ciutat",
-  "pais": "pais"
-}])
+        "id_treballador": ObjectId("62128a9617fcef6543ac0746"),
+        "nom": "treballadora2",
+        "nif": "11111111A",
+        "telefon": 111111111,
+        "carrec": "repartidora",
+        "id_botiga": ObjectId("620e363abadce9728393e320")
 
-db.ulleres.insertMany([{
+     }])
 
-  "_id": ObjectId("621bd63675fb67acae933ddb"),
-  "marca": "D&G",
-  "modelo": "mimo2",
-  "grad ud": "2.25",
-  "grad ue": "2",
-  "tipus muntura": "metalica",
-  "color munt": "plata",
-  "color vidre": "transparent",
-  "preu": "123",
-  "proveidor":ObjectId("620ccae82991df4442fe1187")
+     db.clients.insertMany([{
+
+        "id_client": ObjectId("620e2ae1badce9728393e2b2"),
+        "nom_client": "client1",
+        "cognom": "cognom1",
+        "telefon": "111111111",
+        "correu_electronic": "client1@client1.com",
+        "adress": "adress client 1",
+        "codiPostal": "08100",
+        "id_local": ObjectId("620e316bbadce9728393e2c4"),
+        "id_botiga": ObjectId("620e363abadce9728393e320")
+
+      },{
+
+        "id_client": ObjectId("620e2c8dbadce9728393e2b3"),
+        "nom_client": "client2",
+        "cognom": "cognom2",
+        "telefon": "222222222",
+        "correu_electronic": "client2@client2.com",
+        "adress": "adress client 2",
+        "codiPostal": "08200",
+        "id_local": ObjectId("620e31c9badce9728393e2c9"),
+        "id_botiga": ObjectId("620e363abadce9728393e320")
+
+      }])
+      
+db.productes.insertMany([{
+ 
+    "id_prod": ObjectId("6212796617fcef6543ac071b"),
+    "tipus": "pizza",
+      "nom_producte": "producte",
+      "imatge": "imatge",
+      "descripcio": "descripcio",
+      "preu": 10,
+      "nom_cat": "categoria"
+    },{
   
-},{
+      "id_prod": ObjectId("62127a8c17fcef6543ac071c"),
+      "tipus": "burger",
+      "nom_producte": "producte",
+      "imatge": "imatge",
+      "descripcio": "descripcio",
+      "preu": 5.5,
+      "nom_cat": null
+        
+    },{
+  
+      "id_prod": ObjectId("62127ac017fcef6543ac071d"),
+       "tipus": "beguda",
+      "nom_producte": "producte",
+      "imatge": "imatge",
+      "descripcio": "descripcio",
+      "preu": 2.5,
+      "nom_cat": null
+    }])
 
-  "_id": ObjectId("621bd6b475fb67acae933ddc"),
-  "marca": "prada",
-  "model": "LKIOP',",
-  "grad ud": "2.5",
-  "grad ue": "2",
-  "tipus muntura": "pasta",
-  "color munt": "blanca",
-  "color vidre": "TRANSPARENT",
-  "preu": "345",
-  "proveidor":ObjectId("620ccae82991df4442fe1188")
+    db.productes_demanats.insertMany([{
+        "id_prod_dem": ObjectId("62128e2517fcef6543ac07ae"),
+        "id_prod": ObjectId("6212796617fcef6543ac071b"),
+        "id_comanda": ObjectId("6212955f17fcef6543ac07e9"),
+        
+      },{
 
-},{
+        "id_prod_dem": ObjectId("6212926a17fcef6543ac07bb"),
+        "id_prod": ObjectId("62127ac017fcef6543ac071d"),
+        "id_comanda": ObjectId("62135ae101221abed27004cf"),
+      }])
 
-  "_id": ObjectId("621e0687bee9349940ad9b7d"),
-  "marca": "oakley",
-  "model": "KJU3',",
-  "grad ud": "1.25",
-  "grad ue": "1",
-  "tipus muntura": "flotant",
-  "color munt": "NEGRA',",
-  "color vidre": "TRANSPARENT',",
-  "preu": "567",
-  "proveidor":ObjectId("620ce1ec2991df4442fe11f2")
-
-}])
+    db.comandes.insertMany([{
+    
+        "id_comanda": ObjectId("6212955f17fcef6543ac07e9"),
+        "data_hora": "2021-01-28",
+        "lliurament": "domicili",
+        "preu_total": 53.5,
+        "id_prod_dem": ObjectId("6212926a17fcef6543ac07bb"),
+        "id_treballador": ObjectId("62128a9617fcef6543ac0746"),
+        "id_client": ObjectId("620e2ae1badce9728393e2b2")
+             
+      },{
+        "id_comanda": ObjectId("62135ae101221abed27004cf"),
+        "data_hora": "2021-02-28",
+        "lliurament": "botiga",
+        "preu_total": 25,
+        "id_prod_dem": ObjectId("62128e2517fcef6543ac07ae"),
+        "id_treballador": null,
+        "id_client": ObjectId("620e2c8dbadce9728393e2b3")
+       }])
