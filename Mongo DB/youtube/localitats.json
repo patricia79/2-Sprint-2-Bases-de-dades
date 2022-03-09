@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "620e316bbadce9728393e2c4"
+  },
+  "nom_loc": "Igualada",
+  "id_prov": "620e2f91badce9728393e2b9"
+},{
+  "_id": {
+    "$oid": "62128d6117fcef6543ac0793"
+  },
+  "nom_loc": "Badalona",
+  "id_prov": "620e2f91badce9728393e2b9"
+}]
