@@ -4,12 +4,16 @@
   },
   "data_hora": "2021-01-28",
   "lliurament": "domicili",
-  "preu_total": 53.5,
-  "id_prod_dem": {
-    "$oid": "6212926a17fcef6543ac07bb"
-  },
+  "preu_total": 52.5,
+  "id_prod_dem": ["6212796617fcef6543ac071b", "6212796617fcef6543ac071b",  "6212796617fcef6543ac071b",  "6212796617fcef6543ac071b",  "6212796617fcef6543ac071b", "62127ac017fcef6543ac071d"],
   "treballador": {
-    "$oid": "62128a9617fcef6543ac0746"
+    "nom": "treballadora2",
+    "nif": "11111111A",
+    "telefon": 111111111,
+    "carrec": "repartidora",
+    "botiga": {
+      "$oid": "620e363abadce9728393e320"
+    }
   },
   "id_client": {
     "$oid": "620e2ae1badce9728393e2b2"
@@ -20,11 +24,9 @@
   },
   "data_hora": "2021-02-28",
   "lliurament": "botiga",
-  "preu_total": 25,
-  "id_prod_dem": {
-    "$oid": "62128e2517fcef6543ac07ae"
-  },
-  "treballador": null,
+  "preu_total": 24.5,
+  "id_prod_dem": ["62127a8c17fcef6543ac071c","62127a8c17fcef6543ac071c", "62127a8c17fcef6543ac071c","62127a8c17fcef6543ac071c", "62127ac017fcef6543ac071d"],
+   "treballador": null,
   "id_client": {
     "$oid": "620e2c8dbadce9728393e2b3"
   }
