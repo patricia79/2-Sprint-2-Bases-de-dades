@@ -76,8 +76,6 @@ CREATE TABLE playlist_esborrada(
     FOREIGN KEY(id_playlistA) REFERENCES playlist_activa (id_playlistA)
 );
 
-
-
 CREATE TABLE songs(
     id_song INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     titol VARCHAR(25) NOT NULL,
