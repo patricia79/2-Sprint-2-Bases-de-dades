@@ -1,6 +1,9 @@
-DROP DATABASE IF EXISTS youtube;
-CREATE DATABASE youtube;
-USE youtube;
+
+use('youtube');
+db.createCollection('usuaris');
+db.createCollection('playlists');
+db.createCollection('artistes');
+
 
 CREATE TABLE usuari (
   idUser INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
