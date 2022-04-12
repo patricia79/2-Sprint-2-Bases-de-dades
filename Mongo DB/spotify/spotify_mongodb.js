@@ -1,14 +1,8 @@
-// Esborra la base de dades si existís i la crea de nou.
 use('spotify');
-db.dropDatabase();
-use('spotify');
-
-// Creació de col·leccions (Equivalent a taules a MySQL).
 db.createCollection('usuaris');
 db.createCollection('playlists');
 db.createCollection('artistes');
 
-// Inserir camps i valors a la col·lecció d'usuaris.
 db.usuaris.insertMany(
     [
         {
@@ -73,7 +67,7 @@ db.artistes.insertMany(
         {
             id: 0,
             nom: 'Drake',
-            imatge: 'https://estaticos-cdn.prensaiberica.es/clip/ca650b1b-ef0b-472a-a083-7aa700a77ee8_16-9-discover-aspect-ratio_default_1112295.jpg',
+            imatge: 'imatge1',
             artista_relacionat: {
                 $ref: 'artistes',
                 $id: 1
@@ -83,7 +77,7 @@ db.artistes.insertMany(
                     id: 0,
                     titol: 'Scorpion',
                     any_publicacio: 2018,
-                    portada: 'https://img.discogs.com/pzxOpyTk5Nx8r4zDJfX1dWk-q7w=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12800480-1542281217-8075.jpeg.jpg',
+                    portada: 'portada1',
                     likes: [
                         {
                             $ref: 'usuaris',
