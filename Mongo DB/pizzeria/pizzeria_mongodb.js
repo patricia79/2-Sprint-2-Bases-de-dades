@@ -12,7 +12,7 @@ db.comandes.insertMany([
         telefon: 123456789
     },
     dataHora: new Date('2022-05-21 17:56:45'),
-    tipus_lliurament: 'take away',
+    tipus_lliurament: 'per emportar',
     productes: [
       {
         nom: 'pizza',
@@ -28,7 +28,7 @@ db.comandes.insertMany([
         preu: 2.50
       }
     ],
-    totalPreu: 12.50,
+   preuTotal: 12.50,
     botiga: 
     {
       id: 1,
@@ -65,7 +65,7 @@ db.comandes.insertMany([
         preu: 2.50
       }
     ],
-    totalPrice: 10,
+  preuTotal: 10,
     botiga: 
     {
       id: 1,
