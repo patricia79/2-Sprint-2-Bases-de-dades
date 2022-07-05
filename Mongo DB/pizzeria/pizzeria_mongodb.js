@@ -1,5 +1,8 @@
-
-db.comandes.insertMany([
+use('pizzeria');
+db.dropDatabase();
+use('pizzeria');
+db.createCollection('client');
+db.client.insertMany([
   {
     client:
     {
