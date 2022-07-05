@@ -77,4 +77,3 @@ db.comandes.insertMany([
   }
   
     ])
-   
